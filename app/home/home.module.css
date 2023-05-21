@@ -1,0 +1,64 @@
+@font-face { 
+    font-family: 'staff';
+    src: url('./font/staff.woff') format('woff');
+    }
+
+.Home{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.Home h1 {
+    text-transform: uppercase;
+    position: relative;
+    color:white;
+    z-index:99;
+    
+    
+}
+
+.Vidcon {
+    display: inline;
+    height:100vh;
+    background-color: #9fd1ff;
+    mix-blend-mode: multiply;
+    z-index: 99;
+}
+.Home h1 span{
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+.Home h1 span svg{
+    top:25vh;
+    position:absolute;
+    display:revert;
+    margin:0;
+    padding:0;
+    
+}
+
+.Box{
+display:block;
+position: relative;
+height:100vh;
+width:100vw;
+background: linear-gradient(90deg, #6C94BE 0%, #739DC6 6.52%, #7CA7D3 15.63%, #85B0DF 41.15%, #86B3DF 64.17%, #7EAAD3 79.69%, #6E99C0 100%);
+overflow-x: hidden;
+z-index: 0;
+}
+
+.Video{
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit: cover;
+    z-index: -1;
+    height:100vh;
+    width:100vw;
+    
+}
