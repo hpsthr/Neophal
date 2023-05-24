@@ -1,7 +1,9 @@
 @font-face { 
-    font-family: 'staff';
-    src: url('./font/staff.woff') format('woff');
+    font-family: 'baloo';
+    src: url('./font/Baloo2-Medium.woff') format('woff');
     }
+
+
 
 .Home{
     display:flex;
@@ -9,10 +11,11 @@
     justify-content: center;
     overflow: hidden;
     z-index: 2;
+    font-family: baloo;
 }
 
 .Home h1 {
-    text-transform: uppercase;
+    
     position: relative;
     color:white;
     z-index:99;
@@ -39,19 +42,107 @@
     display:revert;
     margin:0;
     padding:0;
+    pointer-events: none;
     
 }
 
 .Box{
 display:block;
 position: relative;
-height:100vh;
+height:200vh;
 width:100vw;
 background: linear-gradient(90deg, #6C94BE 0%, #739DC6 6.52%, #7CA7D3 15.63%, #85B0DF 41.15%, #86B3DF 64.17%, #7EAAD3 79.69%, #6E99C0 100%);
-overflow-x: hidden;
+overflow: hidden;
 z-index: 0;
 }
 
+.bBox{
+display:flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: flex-end;
+align-items: center;
+
+position: relative;
+
+height:100vh;
+width:100vw;
+background: linear-gradient(90deg, #6C94BE 0%, #739DC6 6.52%, #7CA7D3 15.63%, #85B0DF 41.15%, #86B3DF 64.17%, #7EAAD3 79.69%, #6E99C0 100%);
+z-index: 0;
+}
+
+
+
+.Heading{
+    position: relative;
+    top:0vh;
+    height:15vh;
+    width:100vw;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.71) 0%, rgba(255, 255, 255, 0.53) 0.01%, rgba(255, 255, 255, 0.62) 100%);
+backdrop-filter: blur(7.5px);
+z-index: 3;
+    
+}
+
+
+.Heading h1 {
+    font-family:'baloo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3vh;
+    line-height: 55px;
+    text-align: center;
+    z-index: 2;
+    color: #2b2b2b;
+}
+
+.Aimage {
+    display:block;
+    position:absolute;
+    z-index: 1;
+    top:10vh;
+    right:10vw;
+}
+
+.Conbox {
+    position:relative;
+    top:30vh;
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Conbox div {
+    position:relative;
+    display: block;
+    width:24vw;
+    height:20vw;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.38) 100%);
+    backdrop-filter: blur(31px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 16px;
+ }
+ .Ttext {
+    position:absolute;
+    top:32vh;
+    left:6vw;
+ }
+
+ .Ttext h1 {
+    /* margin:0 2.5vw; */
+    font-weight: 600;
+    font-size: 15vh;
+    line-height: 15vh;
+    color: #ffffff;
+ }
 .Video{
     position:absolute;
     top:0;
@@ -61,4 +152,42 @@ z-index: 0;
     height:100vh;
     width:100vw;
     
+}
+
+
+.Lines {
+    top: 28vh;
+    left: 39vw;
+   display:flex;
+   flex-direction: column;
+   position:absolute;
+}
+.Lines div{
+height:13vh;
+width: 0.85vw;
+margin-top: 2.5vh;
+
+border-radius:14px;
+}
+
+.Stext{
+    top: 35vh;
+    left: 45vw;
+    width:50vw;
+    position:absolute;
+}
+
+.Stext h1 {
+    position:absolute;
+    font-size: 6vh;
+    line-height: 6vh;
+    
+}
+
+.NeoAi{
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100vw;
 }

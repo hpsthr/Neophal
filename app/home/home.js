@@ -1,53 +1,63 @@
 import {compiler} from "@/next.config";
 import classes from "./home.module.css"
+import Image from "next/image"
 import {useTransform, motion, useScroll} from "framer-motion"
-import {useState,useEffect, useRef} from 'react'
+import {useState, useEffect, useRef} from 'react'
 
 const Home = () => {
     const ref = useRef(null);
     const limValue = 200;
     const {scrollYProgress} = useScroll({target: ref});
-    const yVal = useTransform(scrollYProgress, [0.1, 0], [limValue, 0])
-    const y2Val = useTransform(scrollYProgress, [0.4, 0.1], [800, (limValue-1)])
-    const y1Val = useTransform(scrollYProgress, [0, 0.1], [0, -(limValue)])
-    const xVal = useTransform(scrollYProgress, [0.2, 0], [200, 0.1])
-    const sVal = useTransform(scrollYProgress, [0.2, 0.5], [1, 9])
-    const snVal = useTransform(scrollYProgress, [0.3, 0.6], [1, 0])
+    const v1 = 0.05;
+    const v2 = 0.12;
+    const v3 = 0.46;
+    const uVal = 450;
+    const vA1 = 420;
+    const vA2 = vA1 + uVal;
+    const vA3 = vA2 + uVal;
+    const vA4 = vA3 + uVal;
+    const vA5 = vA4 + uVal;
+    const tVal = "97vh";
+    const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
+    const y2Val = useTransform(scrollYProgress, [v2, v1], [800,(limValue - 1)]) // 
+    const fixVal = useTransform(scrollYProgress, [v3, v2], [3000, 0])
+    const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
+    const xVal = useTransform(scrollYProgress, [v2, 0], [200, 0.1])
+    const sVal = useTransform(scrollYProgress, [0.08, 0.17], [1, 10])
+    const snVal = useTransform(scrollYProgress, [0.17, 0.25], [0.8, 0])
     const mColor = "white"
-    const wDth = "500"  
-    const [yvalue, setYvalue] = useState(0) 
-
+    const wDth = "500"
+    const [yvalue,setYvalue] = useState(0)
+    const [avalue,setAvalue] = useState(0)
+    const [dim, setDim] = useState({width:0, height:0})
+   
 
     useEffect(() => {
-        addEventListener("wheel" ,() => {
-            setYvalue(yVal.current > limValue-1 ? y2Val.current:yVal.current);
-            
-        })
-        
-    }, [scrollYProgress])
+        addEventListener("scroll", () => {
+            setYvalue(yVal.current > limValue - 1 ? y2Val.current: yVal.current);
+            setAvalue(fixVal.current);
+            setDim({width:window.innerWidth, height:window.innerHeight})
+        })}, [])
+
     return (
 
-        <div
-            ref={ref}
-           
-            className={classes.Home}>
+        <div ref={ref} className={classes.Home}>
             <video
-                autoPlay
+                autoPlay={true}
                 loop
-                preload="auto"
+                
                 src={require("./Assets/vid1.mp4")}
                 type="video/mp4"
                 className={classes.Video}></video>
-            <motion.div 
-            
-            className={classes.Vidcon}>
+            <motion.div className={classes.Vidcon}>
                 <h1 className="">
-                    
+
                     <span>
                         <motion.svg
-                         style={{
-                            translateY:y1Val,
-                            left:"3vw"}}
+                            style={{
+                            translateY: y1Val,
+                            left: "3vw"
+                        }}
                             height={wDth}
                             viewBox="0 0 6 7"
                             fill="none"
@@ -63,13 +73,15 @@ const Home = () => {
                     <span >
                         <motion.svg
                             style={{
-                            translateY: yvalue > (limValue -1) ? y2Val: yVal,
+                            translateY: yvalue >= (limValue - 1)
+                                ? y2Val
+                                : yVal,
                             translateX: xVal,
                             scale: sVal,
                             opacity: snVal,
-                            left:"25.6vw",
+                            left: "25.6vw"
                         }}
-                            height={wDth} 
+                            height={wDth}
                             viewBox="0 0 159 159"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -80,11 +92,14 @@ const Home = () => {
                                 fill={mColor}/>
                         </motion.svg>
                     </span>
-                    <span style={{marginLeft:25}}>
+                    <span style={{
+                        marginLeft: 25
+                    }}>
                         <motion.svg
                             style={{
-                                translateY:y1Val,
-                                left:"53vw"}}
+                            translateY: y1Val,
+                            left: "53vw"
+                        }}
                             height={wDth}
                             viewBox="0 0 12 7"
                             fill="none"
@@ -106,31 +121,244 @@ const Home = () => {
                 </h1>
             </motion.div>
             <div className={classes.Box}>
-            <span >
-                        <motion.svg
-                            style={{
-                            translateY: yvalue > (limValue -1) ? y2Val: yVal,
-                            translateX: xVal,
-                            scale: sVal,
-                            opacity: snVal,
-                            position:"absolute",
-                            zIndex:-10,
-                            top:"-75vh",
-                            left:"25.6vw",
-                        }}
-                            height={wDth} 
-                            viewBox="0 0 159 159"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M79.5 159C123.407 159 159 123.407 159 79.5C159 35.5934 123.407 0 79.5 0C35.5934 0 0 35.5934 0 79.5C0 123.407 35.5934 159 79.5 159ZM80 125C105.405 125 126 104.405 126 79C126 53.5949 105.405 33 80 33C54.5949 33 34 53.5949 34 79C34 104.405 54.5949 125 80 125Z"
-                                fill={mColor}/>
-                        </motion.svg>
-                    </span>
+                <motion.div
+                style={{
+                    position: avalue >= vA1 && avalue <= vA5-350 ? "fixed": "absolute",
+                    // opacity : avalue >= 990 ? 1 : 0,
+                    transition: "0s",
+                    top:avalue >= vA5 - 350 ? tVal : 0,
+                    translateY:0
+                    }}
+                >
+
+            
+                <div 
+                
+                className={classes.Heading}>
+                    <h1>
+                        Neophal is “ AI technology based Smart cold storage and Primary packing solution
+                        company in Horticulture procedure.
+
+                    </h1>
+                    
+                </div>
+                <motion.div
+                    className={classes.Ttext}>
+                    <h1
+                    style={{
+                        fontSize: avalue >= vA1 && avalue <= vA2 ? "15vh" : "12vh",
+                        color: avalue >= vA1 && avalue <= vA2 ? "white" : "#B5DAFF",
+                        transition: "0.3s"
+                    }}>
+                        AIMS
+                    </h1>
+                    <h1
+                    style={{
+                        fontSize: avalue >= vA2 && avalue <= vA3 ? "15vh" : "12vh",
+                        color: avalue >= vA2 && avalue <= vA3 ? "white" : "#B5DAFF",
+                        transition: "0.3s"
+                    }}>
+                    
+                        VISION
+                    </h1>
+                    <h1
+                    style={{
+                        fontSize: avalue >= vA3 && avalue <= vA4 ? "15vh" : "12vh",
+                        color: avalue >= vA3 && avalue <= vA4 ? "white" : "#B5DAFF",
+                        transition: "0.3s"
+                    }}
+                    >
+                        PRODUCT
+                    </h1>
+                </motion.div>
+                <motion.div  
+                
+                className={classes.Lines}
+                
+                >
+                    <div
+                    style={{
+                        
+                        backgroundColor: avalue >= vA1 && avalue <= vA2 ? "white" : "#B5DAFF",
+                        transition: "0.3s"
+                    }}
+                    ></div>
+                    <div
+                    style={{
+                        
+                        backgroundColor: avalue >= vA2 && avalue <= vA3 ? "white" : "#B5DAFF",
+                        transition: "0.3s"
+                    }}
+                    ></div>
+                    <div
+                    style={{
+                        
+                        backgroundColor: avalue >= vA3 && avalue <= vA4 ? "white" : "#B5DAFF",
+                        transition: "0.3s"
+                    }}
+                    ></div>
+                </motion.div>
+                <motion.div 
+                
+                className={classes.Stext}>
+                    <motion.h1
+                    style={{
+                        translateY : avalue >= vA1 && avalue <= vA2 ? "0" : avalue >=vA1 ? "100vh" : "-100vh",
+                        opacity:avalue >= vA1 && avalue <= vA2 ? 1 : 0,
+                        transition: "0.3s"
+                    }}
+                    >
+                    To bring efficient and affordable horticulture solutions for the farmer which helps them to maximize the quality and monetary value of their produce.
+                    </motion.h1>
+                    <motion.h1
+                    style={{
+                        translateY : avalue >= vA2 && avalue <= vA3 ? "0" : avalue >=vA2 ? "100vh" : "-100vh",
+                        opacity:avalue >= vA2 && avalue <= vA3 ? 1 : 0,
+                        transition: "0.3s"
+                    }}
+                    >
+                    To maximize food quality for the upcoming densely populated India. We achieve it through decentralizing storage with centralized controls using AI technology for point-to-point data connectivity.
+                    </motion.h1>
+                    <motion.h1
+                    style={{
+                        translateY : avalue >= vA3 && avalue <= vA4 ? "0" : avalue >=vA3 ? "100vh" : "-100vh",
+                        opacity:avalue >= vA3 && avalue <= vA4 ? 1 : 0,
+                        transition: "0.3s"
+                    }}
+                    >
+                    <span style={{fontSize:"7vh"}}>CAS</span> <br/> Controlled Atmosphere Storage<br/>
+                     <span>PPS</span> <br/> Primary Processing Solutions
+                    </motion.h1>
+                </motion.div>
+                </motion.div>
+                <span >
+                    <motion.svg
+                        style={{
+                        translateY: yvalue > (limValue - 1)
+                            ? y2Val
+                            : yVal,
+                        translateX: xVal,
+                        scale: sVal,
+                        opacity: snVal,
+                        position: "absolute",
+                        zIndex: -10,
+                        top: "-75vh",
+                        left: "25.6vw",
+                        overflow:"hidden",
+                        pointerEvents:"none"
+                        
+                    }}
+                        height={wDth}
+                        viewBox="0 0 159 159"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M79.5 159C123.407 159 159 123.407 159 79.5C159 35.5934 123.407 0 79.5 0C35.5934 0 0 35.5934 0 79.5C0 123.407 35.5934 159 79.5 159ZM80 125C105.405 125 126 104.405 126 79C126 53.5949 105.405 33 80 33C54.5949 33 34 53.5949 34 79C34 104.405 54.5949 125 80 125Z"
+                            fill={mColor}/>
+                    </motion.svg>
+                </span>
             </div>
-            <div className={classes.Box}></div>
+            <div className={classes.bBox}>
+            <div
+                style={{
+                    position:"absolute",
+                    top:"30vh",
+                    left:"2vw"
+                }}
+                >
+                    <h1
+                    style={{
+                        fontSize:"20vh",
+                        lineHeight:"15vh",
+                        color:"#729bc4"
+
+                    }}
+                    >
+                        How<br/>It <br/>Work
+                    </h1>
+                </div>
+            <Image
+                    style={{
+                        position:"relative",
+                        
+                    }}
+                    src="/how-it-work.png"
+                    width={dim.width}
+                    height={1100}
+                    alt="neophal-app"
+                    />  
+            </div>
+            <div className={classes.bBox}>
+                <h1
+                style={{
+                    width:"80vw",
+                    margin: "2vh 0",
+                    fontSize:"4vh"
+                }}
+                >
+                    CAS-Controlled Atmosphere Storage
+                </h1>
+                <h2 
+                style={{
+                    width:"80vw",
+                    margin: "2vh 0",
+                    fontSize:"2.5vh"
+                }}
+                >
+                Neophal utilises "Artificial Intelligence" to keep an eye on and manage the microclimate 
+                inside the storage. In order to provide the ideal environment for produce to survive long 
+                and be healthy without losing any of their nutritional content, the conditions of the 
+                atmosphere, including temperature, moisture, the level of bacteria, and other critical 
+                elements, are carefully monitored alongside the produce.
+                </h2>
+                <Image
+                    style={{
+                        
+                    }}
+                    src="/ai-apple.png"
+                    width={1000}
+                    height={500}
+                    alt="neophal-app"
+                    />
+                
+                    
+            </div>
+            <div className={classes.bBox}>
+            <h1
+                style={{
+                    width:"80vw",
+                    margin: "2vh 0",
+                    fontSize:"4vh"
+                }}
+                >
+                    PPS-Primary Processing Solutions
+                </h1>
+                <h2 
+                style={{
+                    width:"80vw",
+                    margin: "2vh 0 4vh",
+                    fontSize:"2.5vh"
+                }}
+                >
+                Neophal uses smart automation technology for sorting produce as per the desired quantity 
+                into smaller packets for faster convenience. This method eliminates manual labour which 
+                reduce the cost.
+                </h2>
+            <Image
+                style={{
+                    marginBottom:"6vh"
+                }}
+                    src="/pps-neo.png"
+                    width={800}
+                    height={500}
+                    alt="neophal-pps"
+                    />
+            </div>
+            <div className={classes.bBox}>
+
+            </div>
         </div>
 
     );
