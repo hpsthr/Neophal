@@ -43,9 +43,9 @@ const Home = () => {
 
         <div ref={ref} className={classes.Home}>
             <video
-                autoPlay={true}
+                autoPlay
                 loop
-                
+                muted
                 src={require("./Assets/vid1.mp4")}
                 type="video/mp4"
                 className={classes.Video}></video>
