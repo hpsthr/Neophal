@@ -33,10 +33,10 @@ const Home = () => {
    
 
     useEffect(() => {
+        setDim({width:window.innerWidth, height:window.innerHeight})
         addEventListener("scroll", () => {
             setYvalue(yVal.current > limValue - 1 ? y2Val.current: yVal.current);
             setAvalue(fixVal.current);
-            setDim({width:window.innerWidth, height:window.innerHeight})
         })}, [])
 
     return (
@@ -58,7 +58,7 @@ const Home = () => {
                             translateY: y1Val,
                             left: "3vw"
                         }}
-                            height={wDth}
+                            height={dim.height/1.9}
                             viewBox="0 0 6 7"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +81,7 @@ const Home = () => {
                             opacity: snVal,
                             left: "25.6vw"
                         }}
-                            height={wDth}
+                            height={dim.height/1.9}
                             viewBox="0 0 159 159"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +100,7 @@ const Home = () => {
                             translateY: y1Val,
                             left: "53vw"
                         }}
-                            height={wDth}
+                            height={dim.height/1.9}
                             viewBox="0 0 12 7"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -226,8 +226,8 @@ const Home = () => {
                         transition: "0.3s"
                     }}
                     >
-                    <span style={{fontSize:"7vh"}}>CAS</span> <br/> Controlled Atmosphere Storage<br/>
-                     <span>PPS</span> <br/> Primary Processing Solutions
+                    <span style={{fontSize:"8vh"}}>CAS</span> <br/> Controlled Atmosphere Storage<br/>
+                     <span style={{fontSize:"8vh"}}>PPS</span> <br/> Primary Processing Solutions
                     </motion.h1>
                 </motion.div>
                 </motion.div>
@@ -248,7 +248,7 @@ const Home = () => {
                         pointerEvents:"none"
                         
                     }}
-                        height={wDth}
+                        height={dim.height/1.9}
                         viewBox="0 0 159 159"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -276,7 +276,7 @@ const Home = () => {
 
                     }}
                     >
-                        How<br/>It <br/>Work
+                        How<br/>It <br/>Works
                     </h1>
                 </div>
             <Image
@@ -294,8 +294,10 @@ const Home = () => {
                 <h1
                 style={{
                     width:"80vw",
-                    margin: "2vh 0",
-                    fontSize:"4vh"
+                    position:"relative",
+                    top:"-11vh",
+                    fontSize:"4vh",
+                    
                 }}
                 >
                     CAS-Controlled Atmosphere Storage
@@ -303,19 +305,21 @@ const Home = () => {
                 <h2 
                 style={{
                     width:"80vw",
-                    margin: "2vh 0",
+                    position:"relative",
+                    top:"-8vh",
                     fontSize:"2.5vh"
                 }}
                 >
-                Neophal utilises Artificial Intelligence to keep an eye on and manage the microclimate inside the storage. In order to provide the ideal environment for produce to survive long and be healthy without losing any of their nutritional content, the conditions of the atmosphere, including temperature, moisture, the level of bacteria, and other critical elements, are carefully monitored alongside the produce.
+                Neophal utilises 'Artificial Intelligence' to keep an eye on and manage the microclimate inside the storage. In order to provide the ideal environment for produce to survive long and be healthy without losing any of their nutritional content, the conditions of the atmosphere, including temperature, moisture, the level of bacteria, and other critical elements, are carefully monitored alongside the produce.
                 </h2>
                 <Image
                     style={{
-                        
+                       position:'relative',
+                       top:"3vh"
                     }}
                     src="/ai-apple.png"
-                    width={1000}
-                    height={500}
+                    width={dim.width/1.9}
+                    height={dim.height/1.9}
                     alt="neophal-app"
                     />
                 
@@ -325,7 +329,8 @@ const Home = () => {
             <h1
                 style={{
                     width:"80vw",
-                    margin: "2vh 0",
+                    position:"relative",
+                    top:"-26vh",
                     fontSize:"4vh"
                 }}
                 >
@@ -334,7 +339,8 @@ const Home = () => {
                 <h2 
                 style={{
                     width:"80vw",
-                    margin: "2vh 0 4vh",
+                    position:"relative",
+                    top:"-23vh",
                     fontSize:"2.5vh"
                 }}
                 >
@@ -344,10 +350,11 @@ const Home = () => {
                 </h2>
             <Image
                 style={{
-                    marginBottom:"6vh"
+                    position:"relative",
+                    top:"-6vh",
                 }}
                     src="/pps-neo.png"
-                    width={800}
+                    width={dim.width/2.3}
                     height={500}
                     alt="neophal-pps"
                     />
