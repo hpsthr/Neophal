@@ -310,7 +310,7 @@ const Home = () => {
                     fontSize:"2.5vh"
                 }}
                 >
-                Neophal utilises 'Artificial Intelligence' to keep an eye on and manage the microclimate inside the storage. In order to provide the ideal environment for produce to survive long and be healthy without losing any of their nutritional content, the conditions of the atmosphere, including temperature, moisture, the level of bacteria, and other critical elements, are carefully monitored alongside the produce.
+                Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storage. In order to provide the ideal environment for produce to survive long and be healthy without losing any of their nutritional content, the conditions of the atmosphere, including temperature, moisture, the level of bacteria, and other critical elements, are carefully monitored alongside the produce.
                 </h2>
                 <Image
                     style={{
