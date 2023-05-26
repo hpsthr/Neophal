@@ -301,7 +301,9 @@ const Home = () => {
                 >
                     <h1
                     className={classes.How}
-                    
+                    style={{
+                        color:"#bedeff",
+                    }}
                     >
                         How<br/>It <br/>Works
                     </h1>

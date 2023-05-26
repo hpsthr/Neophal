@@ -71,6 +71,13 @@ background: linear-gradient(90deg, #6C94BE 0%, #739DC6 6.52%, #7CA7D3 15.63%, #8
 z-index: 0;
 }
 
+.How{
+    font-size:20vh;
+    line-height:15vh;
+    color:#729bc4;
+    
+}
+
 .bBox h1{
 color:white;
 }
@@ -224,12 +231,7 @@ border-radius:14px;
     width:100vw;
 }
 
-.How{
-    font-size:20vh;
-    line-height:15vh;
-    color:#729bc4;
-    
-}
+
 
 
 
