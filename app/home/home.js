@@ -58,7 +58,7 @@ const Home = () => {
                             translateY: y1Val,
                             left: "3vw"
                         }}
-                            height={dim.height/1.9}
+                            height={dim.width <= 600 ? dim.height/8 :dim.height/1.9}
                             viewBox="0 0 6 7"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -76,12 +76,12 @@ const Home = () => {
                             translateY: yvalue >= (limValue - 1)
                                 ? y2Val
                                 : yVal,
-                            translateX: xVal,
+                            translateX: dim.width <= 600 ? xVal.current/2.5 : xVal,
                             scale: sVal,
-                            opacity: snVal,
+                        opacity: snVal,
                             left: "25.6vw"
                         }}
-                            height={dim.height/1.9}
+                            height={dim.width <= 600 ? dim.height/8 :dim.height/1.9}
                             viewBox="0 0 159 159"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +100,7 @@ const Home = () => {
                             translateY: y1Val,
                             left: "53vw"
                         }}
-                            height={dim.height/1.9}
+                            height={dim.width <= 600 ? dim.height/8 :dim.height/1.9}
                             viewBox="0 0 12 7"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +120,46 @@ const Home = () => {
                     </span>
                 </h1>
             </motion.div>
-            <div className={classes.Box}>
+            {
+                dim.width < 600 ?
+                <div className={classes.Mbox}>
+                    <div>
+                    <div className={classes.Heading}>
+                    <h1>
+                        Neophal is “ AI technology based Smart cold storage and Primary packing solution
+                        company in Horticulture procedure.
+
+                    </h1>
+                    
+                </div>
+                    </div>
+                    <div className={classes.Pbox}>
+                        <h1>
+                            AIMS
+                        </h1>
+                        <h2>
+                        To bring efficient and affordable horticulture solutions for the farmer which helps them to maximize the quality and monetary value of their produce.
+                        </h2>
+                    </div>
+                    <div className={classes.Pbox}>
+                        <h1>
+                            VISION
+                        </h1>
+                        <h2>
+                        To maximize food quality for the upcoming densely populated India. We achieve it through decentralizing storage with centralized controls using AI technology for point-to-point data connectivity.  
+                        </h2>
+                    </div>
+                    <div className={classes.Pbox}>
+                        <h1>
+                            PRODUCT
+                        </h1>
+                        <h2>
+                        <span style={{fontSize:"2.5vh"}}>CAS</span> <br/> Controlled Atmosphere Storage<br/>
+                     <span style={{fontSize:"2.5vh"}}>PPS</span> <br/> Primary Processing Solutions 
+                        </h2>
+                    </div>
+                </div>:
+                <div className={classes.Box}>
                 <motion.div
                 style={{
                     position: avalue >= vA1 && avalue <= vA5-350 ? "fixed": "absolute",
@@ -132,16 +171,7 @@ const Home = () => {
                 >
 
             
-                <div 
                 
-                className={classes.Heading}>
-                    <h1>
-                        Neophal is “ AI technology based Smart cold storage and Primary packing solution
-                        company in Horticulture procedure.
-
-                    </h1>
-                    
-                </div>
                 <motion.div
                     className={classes.Ttext}>
                     <h1
@@ -154,7 +184,7 @@ const Home = () => {
                     </h1>
                     <h1
                     style={{
-                        fontSize: avalue >= vA2 && avalue <= vA3 ? "15vh" : "12vh",
+                        fontSize:avalue >= vA2 && avalue <= vA3 ? "15vh" : "12vh",
                         color: avalue >= vA2 && avalue <= vA3 ? "white" : "#B5DAFF",
                         transition: "0.3s"
                     }}>
@@ -163,7 +193,7 @@ const Home = () => {
                     </h1>
                     <h1
                     style={{
-                        fontSize: avalue >= vA3 && avalue <= vA4 ? "15vh" : "12vh",
+                        fontSize:avalue >= vA3 && avalue <= vA4 ? "15vh" : "12vh",
                         color: avalue >= vA3 && avalue <= vA4 ? "white" : "#B5DAFF",
                         transition: "0.3s"
                     }}
@@ -237,18 +267,18 @@ const Home = () => {
                         translateY: yvalue > (limValue - 1)
                             ? y2Val
                             : yVal,
-                        translateX: xVal,
+                        translateX: dim.width <= 600 ? xVal.current/2.5 : xVal,
                         scale: sVal,
-                        opacity: snVal,
+                        opacity:  snVal,
                         position: "absolute",
                         zIndex: -10,
-                        top: "-75vh",
+                        top: dim.width <= 600 ?"-55vh": "-75vh",
                         left: "25.6vw",
                         overflow:"hidden",
                         pointerEvents:"none"
                         
                     }}
-                        height={dim.height/1.9}
+                        height={dim.width <= 600 ? dim.height/8 :dim.height/1.9}
                         viewBox="0 0 159 159"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -260,6 +290,7 @@ const Home = () => {
                     </motion.svg>
                 </span>
             </div>
+            }
             <div className={classes.bBox}>
             <div
                 style={{
@@ -269,12 +300,8 @@ const Home = () => {
                 }}
                 >
                     <h1
-                    style={{
-                        fontSize:"20vh",
-                        lineHeight:"15vh",
-                        color:"#729bc4"
-
-                    }}
+                    className={classes.How}
+                    
                     >
                         How<br/>It <br/>Works
                     </h1>
@@ -315,10 +342,10 @@ const Home = () => {
                 <Image
                     style={{
                        position:'relative',
-                       top:"3vh"
+                       top:dim.width < 600 ? "0vh":"3vh"
                     }}
                     src="/ai-apple.png"
-                    width={dim.width/1.9}
+                    width={dim.width < 600 ? dim.width/1.2 :dim.width/1.9}
                     height={dim.height/1.9}
                     alt="neophal-app"
                     />
@@ -351,10 +378,10 @@ const Home = () => {
             <Image
                 style={{
                     position:"relative",
-                    top:"-6vh",
+                    top:dim.width < 600 ? "-5vh":"-6vh",
                 }}
                     src="/pps-neo.png"
-                    width={dim.width/2.3}
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/2.3}
                     height={500}
                     alt="neophal-pps"
                     />
