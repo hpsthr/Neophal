@@ -20,11 +20,11 @@ const Home = () => {
     const tVal = "97vh";
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
     const y2Val = useTransform(scrollYProgress, [v2, v1], [800,(limValue - 1)]) // 
-    const fixVal = useTransform(scrollYProgress, [v3, v2], [3000, 0])
+    const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
     const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
     const xVal = useTransform(scrollYProgress, [v2, 0], [200, 0.1])
     const sVal = useTransform(scrollYProgress, [0.08, 0.17], [1, 10])
-    const snVal = useTransform(scrollYProgress, [0.17, 0.25], [0.8, 0])
+    const snVal = useTransform(scrollYProgress, [0.17, 0.25], [1, 0])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
@@ -37,6 +37,7 @@ const Home = () => {
         addEventListener("scroll", () => {
             setYvalue(yVal.current > limValue - 1 ? y2Val.current: yVal.current);
             setAvalue(fixVal.current);
+            console.log(fixVal.current)
         })}, [])
 
     return (
@@ -120,204 +121,79 @@ const Home = () => {
                     </span>
                 </h1>
             </motion.div>
-            {
-                dim.width < 600 ?
-                <div className={classes.Mbox}>
-                    <div>
-                    <div className={classes.Heading}>
+           
+                
+                <div
+                className={classes.Nbbox}
+                >
                     <h1>
-                        Neophal is “ AI technology based Smart cold storage and Primary packing solution
-                        company in Horticulture procedure.
-
+                        Neophal
                     </h1>
-                    
-                </div>
+                    <div className={classes.Lines}>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
-                    <div className={classes.Pbox}>
-                        <h1>
-                            AIMS
-                        </h1>
-                        <h2>
-                        To bring efficient and affordable horticulture solutions for the farmer which helps them to maximize the quality and monetary value of their produce.
-                        </h2>
-                    </div>
-                    <div className={classes.Pbox}>
-                        <h1>
-                            VISION
-                        </h1>
-                        <h2>
-                        To maximize food quality for the upcoming densely populated India. We achieve it through decentralizing storage with centralized controls using AI technology for point-to-point data connectivity.  
-                        </h2>
-                    </div>
-                    <div className={classes.Pbox}>
-                        <h1>
-                            PRODUCT
-                        </h1>
-                        <h2>
-                        <span style={{fontSize:"2.5vh"}}>CAS</span> <br/> Controlled Atmosphere Storage<br/>
-                     <span style={{fontSize:"2.5vh"}}>PPS</span> <br/> Primary Processing Solutions 
-                        </h2>
-                    </div>
-                </div>:
-                <div className={classes.Box}>
-                <motion.div
-                style={{
-                    position: avalue >= vA1 && avalue <= vA5-350 ? "fixed": "absolute",
-                    // opacity : avalue >= 990 ? 1 : 0,
-                    transition: "0s",
-                    top:avalue >= vA5 - 350 ? tVal : 0,
-                    translateY:0
-                    }}
-                >
+                    <h2>
+                    Neophal is AI technology based Smart cold storage 
+                    and Primary packing solution company in 
+                    Horticulture procedure.” <br/>
+                                            <br/>
+                    With an aim to bring efficient and affordable 
+                    horticulture solutions for the farmer which helps 
+                    them to maximize the quality and monetary value of 
+                    their produce.
+                    Neophal maximize food quality for the upcoming 
+                    densely populated India by achieve it through 
+                    decentralizing storage with centralized controls 
+                    using AI technology for point-to-point data 
+                    connectivity.
 
+
+                    </h2>
+                </div>
             
-                
-                <motion.div
-                    className={classes.Ttext}>
-                    <h1
-                    style={{
-                        fontSize: avalue >= vA1 && avalue <= vA2 ? "15vh" : "12vh",
-                        color: avalue >= vA1 && avalue <= vA2 ? "white" : "#B5DAFF",
-                        transition: "0.3s"
-                    }}>
-                        AIMS
-                    </h1>
-                    <h1
-                    style={{
-                        fontSize:avalue >= vA2 && avalue <= vA3 ? "15vh" : "12vh",
-                        color: avalue >= vA2 && avalue <= vA3 ? "white" : "#B5DAFF",
-                        transition: "0.3s"
-                    }}>
-                    
-                        VISION
-                    </h1>
-                    <h1
-                    style={{
-                        fontSize:avalue >= vA3 && avalue <= vA4 ? "15vh" : "12vh",
-                        color: avalue >= vA3 && avalue <= vA4 ? "white" : "#B5DAFF",
-                        transition: "0.3s"
-                    }}
-                    >
-                        PRODUCT
-                    </h1>
-                </motion.div>
-                <motion.div  
-                
-                className={classes.Lines}
-                
-                >
-                    <div
-                    style={{
-                        
-                        backgroundColor: avalue >= vA1 && avalue <= vA2 ? "white" : "#B5DAFF",
-                        transition: "0.3s"
-                    }}
-                    ></div>
-                    <div
-                    style={{
-                        
-                        backgroundColor: avalue >= vA2 && avalue <= vA3 ? "white" : "#B5DAFF",
-                        transition: "0.3s"
-                    }}
-                    ></div>
-                    <div
-                    style={{
-                        
-                        backgroundColor: avalue >= vA3 && avalue <= vA4 ? "white" : "#B5DAFF",
-                        transition: "0.3s"
-                    }}
-                    ></div>
-                </motion.div>
-                <motion.div 
-                
-                className={classes.Stext}>
-                    <motion.h1
-                    style={{
-                        translateY : avalue >= vA1 && avalue <= vA2 ? "0" : avalue >=vA1 ? "100vh" : "-100vh",
-                        opacity:avalue >= vA1 && avalue <= vA2 ? 1 : 0,
-                        transition: "0.3s"
-                    }}
-                    >
-                    To bring efficient and affordable horticulture solutions for the farmer which helps them to maximize the quality and monetary value of their produce.
-                    </motion.h1>
-                    <motion.h1
-                    style={{
-                        translateY : avalue >= vA2 && avalue <= vA3 ? "0" : avalue >=vA2 ? "100vh" : "-100vh",
-                        opacity:avalue >= vA2 && avalue <= vA3 ? 1 : 0,
-                        transition: "0.3s"
-                    }}
-                    >
-                    To maximize food quality for the upcoming densely populated India. We achieve it through decentralizing storage with centralized controls using AI technology for point-to-point data connectivity.
-                    </motion.h1>
-                    <motion.h1
-                    style={{
-                        translateY : avalue >= vA3 && avalue <= vA4 ? "0" : avalue >=vA3 ? "100vh" : "-100vh",
-                        opacity:avalue >= vA3 && avalue <= vA4 ? 1 : 0,
-                        transition: "0.3s"
-                    }}
-                    >
-                    <span style={{fontSize:"8vh"}}>CAS</span> <br/> Controlled Atmosphere Storage<br/>
-                     <span style={{fontSize:"8vh"}}>PPS</span> <br/> Primary Processing Solutions
-                    </motion.h1>
-                </motion.div>
-                </motion.div>
-                <span >
-                    <motion.svg
-                        style={{
-                        translateY: yvalue > (limValue - 1)
-                            ? y2Val
-                            : yVal,
-                        translateX: dim.width <= 600 ? xVal.current/2.5 : xVal,
-                        scale: sVal,
-                        opacity:  snVal,
-                        position: "absolute",
-                        zIndex: -10,
-                        top: dim.width <= 600 ?"-55vh": "-75vh",
-                        left: "25.6vw",
-                        overflow:"hidden",
-                        pointerEvents:"none"
-                        
-                    }}
-                        height={dim.width <= 600 ? dim.height/8 :dim.height/1.9}
-                        viewBox="0 0 159 159"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M79.5 159C123.407 159 159 123.407 159 79.5C159 35.5934 123.407 0 79.5 0C35.5934 0 0 35.5934 0 79.5C0 123.407 35.5934 159 79.5 159ZM80 125C105.405 125 126 104.405 126 79C126 53.5949 105.405 33 80 33C54.5949 33 34 53.5949 34 79C34 104.405 54.5949 125 80 125Z"
-                            fill={mColor}/>
-                    </motion.svg>
-                </span>
-            </div>
-            }
-            <div className={classes.bBox}>
             <div
+            style={{
+                display:"flex",
+                flexDirection:"row",
+                justifyContent:"center"
+            }}
+            className={classes.bBox}>
+                <motion.div 
                 style={{
-                    position:"absolute",
-                    top:"30vh",
-                    left:"2vw"
+                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "-50vw",
+                    transition:"0.3s"
                 }}
-                >
-                    <h1
-                    className={classes.How}
+                className={classes.bimg}>
+                    <Image
                     style={{
-                        color:"#bedeff",
-                    }}
-                    >
-                        How<br/>It <br/>Works
-                    </h1>
-                </div>
-            <Image
+                        position:'relative',
+                        top:dim.width < 600 ? "0vh":"3vh"
+                     }}
+                     src="/ai-apple.png"
+                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
+                     height={dim.height/1.9}
+                     alt="neophal-app"
+                    />
+                </motion.div>
+                <motion.div
+                style={{
+                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "50vw",
+                    transition:"0.3s"
+                }}
+                className={classes.bimg}>
+                <Image
                     style={{
-                        position:"relative",
-                        
-                    }}
-                    src="/how-it-work.png"
-                    width={dim.width}
-                    height={1100}
-                    alt="neophal-app"
-                    />  
+                        position:'relative',
+                        top:dim.width < 600 ? "0vh":"3vh"
+                     }}
+                     src="/ai-apple.png"
+                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
+                     height={dim.height/1.9}
+                     alt="neophal-app"
+                    />
+                </motion.div>
             </div>
             <div className={classes.bBox}>
                 <h1
@@ -388,9 +264,50 @@ const Home = () => {
                     alt="neophal-pps"
                     />
             </div>
-            <div className={classes.bBox}>
+            <div
+             style={{
+                display:"flex",
+                flexDirection:"row",
+                justifyContent:"space-between"
+            }}
+            className={classes.bBox}>
+                <div className={classes.bimg2}>
+                    <h1>
+                    Making <br/>
+                    Earth <br/>
+                    Greener <br/>
+                    and <br/>
+                    People <br/>
+                    Healther <br/>
+                    </h1>
+                </div>
+                <div className= {classes.bimg3}>
+                <Image
+                    style={{
+                        position:'relative',
+                        top:dim.width < 600 ? "0vh":"3vh"
+                     }}
+                     src="/ai-apple.png"
+                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
+                     height={dim.height/1.9}
+                     alt="neophal-app"
+                    />
+                
 
+                </div>
             </div>
+            <footer className = {classes.Footer}>
+                <div>
+                     <h2>Contact <br/>
+                     Amit Howladar <br/>
+                     </h2>
+                     <a href="mailto:amit@neophal.com"> amit@neophal.com </a>
+                     <h2>
+                     +91 74900 37158
+                     </h2>
+                </div>
+                
+            </footer>
         </div>
 
     );

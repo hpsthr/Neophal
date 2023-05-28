@@ -26,8 +26,8 @@
 .Vidcon {
     display: inline;
     height:100vh;
-    background-color: #9fd1ff;
-    mix-blend-mode: multiply;
+    background-color: transparent;
+    filter: blue;
     z-index: 99;
 }
 .Home h1 span{
@@ -67,8 +67,35 @@ position: relative;
 
 height:100vh;
 width:100vw;
-background: linear-gradient(90deg, #6C94BE 0%, #739DC6 6.52%, #7CA7D3 15.63%, #85B0DF 41.15%, #86B3DF 64.17%, #7EAAD3 79.69%, #6E99C0 100%);
-z-index: 0;
+background-color:#9fd1ff;
+}
+
+.Nbbox{
+    height:100vh;
+    width:100vw;
+    background-color:#9fd1ff;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.Nbbox h1 {
+    position:relative;
+    font-size:15vh;
+    margin-right:6vw;
+    margin-left:2vw;
+}
+.Nbbox div {
+    position:relative;
+    
+}
+.Nbbox h2 {
+    position:relative;
+    font-size:3.4vh;
+    margin-right:2vw;
+    margin-left:6vw;
 }
 
 .How{
@@ -80,6 +107,22 @@ z-index: 0;
 
 .bBox h1{
 color:white;
+}
+
+.bimg {
+    position: relative;
+    width:45vw;
+}
+
+.bimg3{
+    margin-right:3vw;
+}
+.bimg2{
+    margin-left:3vw;
+}
+.bimg2 h1{
+font-size:13vh;
+line-height: 13vh;
 }
 .Mbox{
     position:relative;
@@ -194,17 +237,18 @@ z-index: 3;
 
 
 .Lines {
-    top: 28vh;
-    left: 39vw;
+    position:relative;
    display:flex;
    flex-direction: column;
-   position:absolute;
+   
+   
+   
 }
 .Lines div{
 height:13vh;
 width: 0.85vw;
 margin-top: 2.5vh;
-
+background-color:white;
 border-radius:14px;
 }
 
@@ -231,7 +275,13 @@ border-radius:14px;
     width:100vw;
 }
 
-
+.Footer {
+    background-color : #729bc4
+}
+.Footer div {
+    position:relative;
+    left:80vw;
+}
 
 
 
