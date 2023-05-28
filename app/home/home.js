@@ -135,7 +135,7 @@ const Home = () => {
                         <div></div>
                     </div>
                     <h2>
-                    With an aim to reduce food wastage, Neophal's innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.
+                    With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.
 
 
                     </h2>
@@ -183,7 +183,7 @@ const Home = () => {
                     />
                 </motion.div>
                 <div className={classes.btxt}>
-                    "Bringing Horticulture and Ai Together"
+                &#39;Bringing Horticulture and Ai Together&rsquo;
                 </div>
             </div>
             <div className={classes.bBox}>
