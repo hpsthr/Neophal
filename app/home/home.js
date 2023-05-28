@@ -135,19 +135,7 @@ const Home = () => {
                         <div></div>
                     </div>
                     <h2>
-                    Neophal is AI technology based Smart cold storage 
-                    and Primary packing solution company in 
-                    Horticulture procedure.” <br/>
-                                            <br/>
-                    With an aim to bring efficient and affordable 
-                    horticulture solutions for the farmer which helps 
-                    them to maximize the quality and monetary value of 
-                    their produce.
-                    Neophal maximize food quality for the upcoming 
-                    densely populated India by achieve it through 
-                    decentralizing storage with centralized controls 
-                    using AI technology for point-to-point data 
-                    connectivity.
+                    With an aim to reduce food wastage, Neophal's innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.
 
 
                     </h2>
