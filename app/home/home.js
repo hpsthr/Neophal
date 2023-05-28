@@ -169,7 +169,7 @@ const Home = () => {
                     <Image
                     style={{
                         position:'relative',
-                        top:dim.width < 600 ? "0vh":"3vh"
+                        display:"inline"
                      }}
                      src="/ai-apple.png"
                      width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
@@ -186,7 +186,7 @@ const Home = () => {
                 <Image
                     style={{
                         position:'relative',
-                        top:dim.width < 600 ? "0vh":"3vh"
+                        
                      }}
                      src="/ai-apple.png"
                      width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
@@ -194,6 +194,9 @@ const Home = () => {
                      alt="neophal-app"
                     />
                 </motion.div>
+                <div className={classes.btxt}>
+                    "Bringing Horticulture and Ai Together"
+                </div>
             </div>
             <div className={classes.bBox}>
                 <h1
@@ -205,7 +208,9 @@ const Home = () => {
                     
                 }}
                 >
-                    CAS-Controlled Atmosphere Storage
+                    Dynamic Controlled 
+                    Atmosphere Storage (DCA)
+
                 </h1>
                 <h2 
                 style={{
@@ -239,7 +244,7 @@ const Home = () => {
                     fontSize:"4vh"
                 }}
                 >
-                    PPS-Primary Processing Solutions
+                    Primary Processing Solutions (PPS)
                 </h1>
                 <h2 
                 style={{

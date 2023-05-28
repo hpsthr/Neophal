@@ -111,7 +111,10 @@ color:white;
 
 .bimg {
     position: relative;
-    width:45vw;
+    display: flex;
+    width: 45vw;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .bimg3{
@@ -123,6 +126,14 @@ color:white;
 .bimg2 h1{
 font-size:13vh;
 line-height: 13vh;
+}
+
+.btxt {
+    position:absolute;
+    top: 88vh;
+    left: 25vw;
+    font-size:6vh;
+    color:white;
 }
 .Mbox{
     position:relative;
