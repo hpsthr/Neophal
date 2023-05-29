@@ -18,13 +18,15 @@ const Home = () => {
     const vA4 = vA3 + uVal;
     const vA5 = vA4 + uVal;
     const tVal = "97vh";
+    const cSize = "15vw"
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
     const y2Val = useTransform(scrollYProgress, [v2, v1], [800,(limValue - 1)]) // 
     const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
     const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
-    const xVal = useTransform(scrollYProgress, [v2, 0], [200, 0.1])
-    const sVal = useTransform(scrollYProgress, [0.08, 0.17], [1, 10])
-    const snVal = useTransform(scrollYProgress, [0.17, 0.25], [1, 0])
+    const xVal = useTransform(scrollYProgress, [v2, 0], [250, 0.1])
+    const sVal = useTransform(scrollYProgress, [0.05, 0.17], [1, 10])
+    const snVal = useTransform(scrollYProgress, [0.18, 0.184], [1, 0])
+    const oVal = useTransform(scrollYProgress, [0.186, 0.20], [0, 1])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
@@ -72,6 +74,31 @@ const Home = () => {
                         </motion.svg>
                     </span>
                     <span >
+                        <motion.div
+                        style={{
+                            display:"block",
+                            backgroundColor:"#9fd1ff",
+                            position:"relative",
+                            width:cSize,
+                            height:cSize,
+                            top: "35.8vh",
+                            left:"31vw",
+                            zIndex:2,
+                            borderRadius:"50%",
+                            translateY: yvalue >= (limValue - 1)
+                                ? y2Val
+                                : yVal,
+                            translateX: dim.width <= 600 ? xVal.current/2.5 : xVal,
+                            scale: sVal,
+                            opacity: snVal,
+                            pointerEvents:"none",
+                            // transition:"0.1s",
+                            // transitionTimingFunction: "ease-in ease-out"
+
+                        }}
+                        >
+
+                        </motion.div>
                         <motion.svg
                             style={{
                             translateY: yvalue >= (limValue - 1)
@@ -79,8 +106,11 @@ const Home = () => {
                                 : yVal,
                             translateX: dim.width <= 600 ? xVal.current/2.5 : xVal,
                             scale: sVal,
-                        opacity: snVal,
-                            left: "25.6vw"
+                            opacity: snVal,
+                            left: "25.6vw",
+                            // transition:"0.1s",
+                            // transitionTimingFunction: "ease-in ease-out"
+
                         }}
                             height={dim.width <= 600 ? dim.height/8 :dim.height/1.9}
                             viewBox="0 0 159 159"
@@ -126,8 +156,11 @@ const Home = () => {
                 <div
                 className={classes.Nbbox}
                 >
-                    <div
+                    <motion.div
                     className={classes.Logo}
+                    style={{
+                      opacity:oVal  
+                    }}
                     >
 
                     
@@ -141,20 +174,29 @@ const Home = () => {
                     height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
                     alt="neophal-pps"
                     />
-                    <h1>
+                    <motion.h1
+                    >
                         Neophal
-                    </h1>
-                    </div>
-                    <div className={classes.Lines}>
+                    </motion.h1>
+                    </motion.div>
+                    <motion.div
+                    style={{
+                        opacity:oVal  
+                      }}
+                    className={classes.Lines}>
                         <div></div>
                         <div></div>
                         <div></div>
-                    </div>
-                    <h2>
+                    </motion.div>
+                    <motion.h2
+                    style={{
+                        opacity:oVal  
+                      }}
+                    >
                     With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.
 
 
-                    </h2>
+                    </motion.h2>
                 </div>
             
             <div
@@ -166,8 +208,8 @@ const Home = () => {
             className={classes.bBox}>
                 <motion.div 
                 style={{
-                    top:"-10vh",
-                    translateX:avalue > 900 && avalue < 1500 ? 0 : "-50vw",
+                    top:"-18vh",
+                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "-50vw",
                     transition:"0.3s"
                 }}
                 className={classes.bimg}>
@@ -186,7 +228,7 @@ const Home = () => {
                 className={classes.Plus}>
                     <motion.h1
                     style={{
-                        opacity:avalue > 900 && avalue < 1500 ? 1 : 0 ,
+                        opacity:avalue > 1000 && avalue < 1500 ? 1 : 0 ,
                         transition:"0.3s"
                     }}
                     >
@@ -195,8 +237,8 @@ const Home = () => {
                 </div>
                 <motion.div
                 style={{
-                    top:"-10vh",
-                    translateX:avalue > 900 && avalue < 1500 ? 0 : "50vw",
+                    top:"-18vh",
+                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "50vw",
                     transition:"0.3s"
                 }}
                 className={classes.bimg}>
@@ -250,8 +292,8 @@ const Home = () => {
                        position:'relative',
                        top:dim.width < 600 ? "0vh":"-5vh"
                     }}
-                    src="/CAS-01.png"
-                    width={dim.width < 600 ? dim.width/1.2 :dim.width/1.9}
+                    src="/CAS-02.png"
+                    width={dim.width < 600 ? dim.width/1.2 :dim.width}
                     height={dim.height/1.9}
                     alt="neophal-app"
                     />
@@ -286,8 +328,8 @@ const Home = () => {
                     position:"relative",
                     top:dim.width < 600 ? "-5vh":"-6vh",
                 }}
-                    src="/PPS-01.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/1.9}
+                    src="/PPS-03.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width}
                     height={500}
                     alt="neophal-pps"
                     />

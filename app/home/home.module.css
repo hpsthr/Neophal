@@ -18,7 +18,7 @@
     
     position: relative;
     
-    z-index:99;
+    
     
     
 }
@@ -71,7 +71,7 @@ background-color:#9fd1ff;
 }
 
 .Nbbox{
-    height:100vh;
+    height:150vh;
     width:100vw;
     background-color:#9fd1ff;
     display:flex;
@@ -142,7 +142,7 @@ font-size:18vh;
 }
 .btxt {
     position:absolute;
-    top: 78vh;
+    top: 71vh;
     left: 25vw;
     font-size:6vh;
     color:rgb(56, 56, 56);
