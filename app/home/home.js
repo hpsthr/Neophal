@@ -18,7 +18,7 @@ const Home = () => {
     const vA4 = vA3 + uVal;
     const vA5 = vA4 + uVal;
     const tVal = "97vh";
-    const cSize = "15vw"
+    const cSize = "39vh"
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
     const y2Val = useTransform(scrollYProgress, [v2, v1], [800,(limValue - 1)]) // 
     const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
@@ -39,6 +39,7 @@ const Home = () => {
         addEventListener("scroll", () => {
             setYvalue(yVal.current > limValue - 1 ? y2Val.current: yVal.current);
             setAvalue(fixVal.current);
+            setDim({width:window.innerWidth, height:window.innerHeight})
             console.log(fixVal.current)
         })}, [])
 
@@ -81,8 +82,8 @@ const Home = () => {
                             position:"relative",
                             width:cSize,
                             height:cSize,
-                            top: "35.8vh",
-                            left:"31vw",
+                            top: "32vh",
+                            left:"29.5vw",
                             zIndex:2,
                             borderRadius:"50%",
                             translateY: yvalue >= (limValue - 1)
@@ -108,6 +109,7 @@ const Home = () => {
                             scale: sVal,
                             opacity: snVal,
                             left: "25.6vw",
+                            zIndex:3,
                             // transition:"0.1s",
                             // transitionTimingFunction: "ease-in ease-out"
 
