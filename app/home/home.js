@@ -150,7 +150,8 @@ const Home = () => {
             className={classes.bBox}>
                 <motion.div 
                 style={{
-                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "-50vw",
+                    top:"-10vh",
+                    translateX:avalue > 900 && avalue < 1500 ? 0 : "-50vw",
                     transition:"0.3s"
                 }}
                 className={classes.bimg}>
@@ -167,7 +168,8 @@ const Home = () => {
                 </motion.div>
                 <motion.div
                 style={{
-                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "50vw",
+                    top:"-10vh",
+                    translateX:avalue > 900 && avalue < 1500 ? 0 : "50vw",
                     transition:"0.3s"
                 }}
                 className={classes.bimg}>
@@ -184,7 +186,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div 
                 style={{
-                    scaleY: avalue > 1250 ? 1 : 0 ,
+                    scaleY: avalue > 1150 ? 1 : 0 ,
                     transition:"0.3s"
                 }}
                 className={classes.btxt}>
@@ -196,7 +198,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-11vh",
+                    top:"-6vh",
                     fontSize:"4vh",
                     
                 }}
@@ -209,7 +211,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-8vh",
+                    top:"-5vh",
                     fontSize:"2.5vh"
                 }}
                 >
@@ -218,7 +220,7 @@ const Home = () => {
                 <Image
                     style={{
                        position:'relative',
-                       top:dim.width < 600 ? "0vh":"3vh"
+                       top:dim.width < 600 ? "0vh":"-5vh"
                     }}
                     src="/CAS-01.png"
                     width={dim.width < 600 ? dim.width/1.2 :dim.width/1.9}
@@ -233,7 +235,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-26vh",
+                    top:"-19vh",
                     fontSize:"4vh"
                 }}
                 >
@@ -243,7 +245,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-23vh",
+                    top:"-18vh",
                     fontSize:"2.5vh"
                 }}
                 >
@@ -256,8 +258,8 @@ const Home = () => {
                     position:"relative",
                     top:dim.width < 600 ? "-5vh":"-6vh",
                 }}
-                    src="/pps-neo.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/2.3}
+                    src="/PPS-01.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/1.9}
                     height={500}
                     alt="neophal-pps"
                     />
