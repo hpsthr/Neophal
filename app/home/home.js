@@ -126,9 +126,25 @@ const Home = () => {
                 <div
                 className={classes.Nbbox}
                 >
+                    <div
+                    className={classes.Logo}
+                    >
+
+                    
+                    <Image
+                style={{
+                    position:"relative",
+                    
+                }}
+                    src="/logo.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/9}
+                    height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
+                    alt="neophal-pps"
+                    />
                     <h1>
                         Neophal
                     </h1>
+                    </div>
                     <div className={classes.Lines}>
                         <div></div>
                         <div></div>
@@ -166,6 +182,17 @@ const Home = () => {
                      alt="neophal-app"
                     />
                 </motion.div>
+                <div
+                className={classes.Plus}>
+                    <motion.h1
+                    style={{
+                        opacity:avalue > 900 && avalue < 1500 ? 1 : 0 ,
+                        transition:"0.3s"
+                    }}
+                    >
+                        +
+                    </motion.h1>
+                </div>
                 <motion.div
                 style={{
                     top:"-10vh",
@@ -184,6 +211,7 @@ const Home = () => {
                      alt="neophal-app"
                     />
                 </motion.div>
+                
                 <motion.div 
                 style={{
                     scaleY: avalue > 1150 ? 1 : 0 ,
@@ -235,7 +263,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-19vh",
+                    top:"-6vh",
                     fontSize:"4vh"
                 }}
                 >
@@ -245,7 +273,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-18vh",
+                    top:"-5vh",
                     fontSize:"2.5vh"
                 }}
                 >
@@ -294,24 +322,53 @@ const Home = () => {
 
                 </div>
             </div>
-            <footer className = {classes.Footer}>
+            <footer 
+            className = {classes.Mfooter}
+            >
+                <div
+                className = {classes.Footer}
+                >
+                <div
+                style={{
+                    right:"46vw",
+                    top:"1vh"
+                }}
+                >
+                <Image
+                style={{
+                    position:"relative",
+                    
+                }}
+                    src="/logo2.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/5}
+                    height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
+                    alt="neophal-pps"
+                    />
+                </div>
                 <div>
                      <h2
                      style={{
                         fontSize:"2vh"
                      }}
                      >Contact </h2>
-                     <h2>Name: Amit Howladar 
+                     <h2>Amit Howladar 
                      </h2>
-                     <a href="mailto:amit@neophal.com"> Email: amit@neophal.com </a>
+                     <a href="mailto:amit@neophal.com"> amit@neophal.com </a>
                      <h2>
-                     Phone: +91 74900 37158
+                     +91 74900 37158
                      </h2>
-                     <h2>
-                     Address: Plot no. 337, Industrial Area phase 2, Chandigarh 160002
+                     
+                </div>
+                <div>
+                <h2>
+                    <span 
+                    style={{
+                        fontSize:"2vh"
+                    }}
+                    >Address:</span> <br/> Plot no. 337, <br/> Industrial Area phase 2, <br/>  Chandigarh 160002
                      </h2>
                 </div>
-                
+                </div>
             </footer>
         </div>
 
