@@ -245,6 +245,15 @@ z-index: 3;
     width:100vw;
     
 }
+.Video2{
+    position:absolute;
+    top: 5vh;
+    left: 41vw;
+    object-fit: cover;
+    height: 90vh;
+    width: 60vw;
+    
+}
 
 
 .Lines {
@@ -255,6 +264,8 @@ z-index: 3;
    
    
 }
+
+
 .Lines div{
 height:13vh;
 width: 0.85vw;
@@ -291,7 +302,9 @@ border-radius:14px;
 }
 .Footer div {
     position:relative;
-    left:80vw;
+    left:70vw;
+    margin: 2vh 2vh;
+    color:white
 }
 
 

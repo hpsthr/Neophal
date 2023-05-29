@@ -47,7 +47,7 @@ const Home = () => {
                 autoPlay
                 loop
                 muted
-                src={require("./Assets/vid1.mp4")}
+                src={require("./Assets/video1.mp4")}
                 type="video/mp4"
                 className={classes.Video}></video>
             <motion.div className={classes.Vidcon}>
@@ -159,8 +159,8 @@ const Home = () => {
                         position:'relative',
                         display:"inline"
                      }}
-                     src="/ai-apple.png"
-                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
+                     src="/apples.png"
+                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.7}
                      height={dim.height/1.9}
                      alt="neophal-app"
                     />
@@ -176,15 +176,20 @@ const Home = () => {
                         position:'relative',
                         
                      }}
-                     src="/ai-apple.png"
-                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
+                     src="/ai1.png"
+                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.7}
                      height={dim.height/1.9}
                      alt="neophal-app"
                     />
                 </motion.div>
-                <div className={classes.btxt}>
+                <motion.div 
+                style={{
+                    scaleY: avalue > 1250 ? 1 : 0 ,
+                    transition:"0.3s"
+                }}
+                className={classes.btxt}>
                 &#39;Bringing Horticulture and Ai Together&rsquo;
-                </div>
+                </motion.div>
             </div>
             <div className={classes.bBox}>
                 <h1
@@ -215,7 +220,7 @@ const Home = () => {
                        position:'relative',
                        top:dim.width < 600 ? "0vh":"3vh"
                     }}
-                    src="/ai-apple.png"
+                    src="/CAS-01.png"
                     width={dim.width < 600 ? dim.width/1.2 :dim.width/1.9}
                     height={dim.height/1.9}
                     alt="neophal-app"
@@ -275,28 +280,33 @@ const Home = () => {
                     </h1>
                 </div>
                 <div className= {classes.bimg3}>
-                <Image
-                    style={{
-                        position:'relative',
-                        top:dim.width < 600 ? "0vh":"3vh"
-                     }}
-                     src="/ai-apple.png"
-                     width={dim.width < 600 ? dim.width/1.2 :dim.width/2.5}
-                     height={dim.height/1.9}
-                     alt="neophal-app"
-                    />
+                <video
+                autoPlay
+                onPause={avalue > 2600 ? true : false}
+                loop
+                muted
+                src={require("./Assets/video2.mp4")}
+                type="video/mp4"
+                className={classes.Video2}></video>
                 
 
                 </div>
             </div>
             <footer className = {classes.Footer}>
                 <div>
-                     <h2>Contact <br/>
-                     Amit Howladar <br/>
+                     <h2
+                     style={{
+                        fontSize:"2vh"
+                     }}
+                     >Contact </h2>
+                     <h2>Name: Amit Howladar 
                      </h2>
-                     <a href="mailto:amit@neophal.com"> amit@neophal.com </a>
+                     <a href="mailto:amit@neophal.com"> Email: amit@neophal.com </a>
                      <h2>
-                     +91 74900 37158
+                     Phone: +91 74900 37158
+                     </h2>
+                     <h2>
+                     Address: Plot no. 337, Industrial Area phase 2, Chandigarh 160002
                      </h2>
                 </div>
                 
