@@ -317,8 +317,9 @@ border-radius:14px;
     position:relative;
     display:flex;
     flex-direction: row;
+    justify-content: space-around;
     
-    left:52vw;
+    
 }
 
 
@@ -329,7 +330,11 @@ border-radius:14px;
     color:white
 }
 
-
+.Contact{
+    position:relative;
+    display:flex;
+    flex-direction: row;
+}
 
 @media only screen and (max-width: 600px)  {
 

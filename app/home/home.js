@@ -26,7 +26,7 @@ const Home = () => {
     const xVal = useTransform(scrollYProgress, [v2, 0], [250, 0.1])
     const sVal = useTransform(scrollYProgress, [0.05, 0.20], [1, 10])
     const snVal = useTransform(scrollYProgress, [0.22, 0.25], [1, 0])
-    const oVal = useTransform(scrollYProgress, [0.23, 0.27], [0, 1])
+    const oVal = useTransform(scrollYProgress, [0.22, 0.25], [0, 1])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
@@ -345,7 +345,7 @@ const Home = () => {
                 >
                 <div
                 style={{
-                    right:"46vw",
+                    
                     top:"1vh"
                 }}
                 >
@@ -360,6 +360,7 @@ const Home = () => {
                     alt="neophal-pps"
                     />
                 </div>
+                <div className={classes.Contact}>
                 <div>
                      <h2
                      style={{
@@ -382,6 +383,7 @@ const Home = () => {
                     }}
                     >Address:</span> <br/> Plot no. 337, <br/> Industrial Area phase 2, <br/>  Chandigarh 160002
                      </h2>
+                </div>
                 </div>
                 </div>
             </footer>
