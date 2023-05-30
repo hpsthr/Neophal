@@ -287,8 +287,7 @@ const Home = () => {
                     fontSize:"2.5vh"
                 }}
                 >
-                Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storage. In order to provide the ideal environment for produce to survive long and be healthy without losing any of their nutritional content, the conditions of the atmosphere, including temperature, moisture, the level of bacteria, and other critical elements, are carefully monitored alongside the produce.
-                </h2>
+                Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storages to provide the ideal environment for the produce to survive long and be healthy without losing any of their nutritional content. The conditions of the atmosphere including temperature, moisture, oxygen and other critical elements are dynamically controlled to preserve the quality of the fruits stored inside these storages.                </h2>
                 <Image
                     style={{
                        position:'relative',
@@ -321,9 +320,7 @@ const Home = () => {
                     fontSize:"2.5vh"
                 }}
                 >
-                Neophal uses smart automation technology for sorting produce as per the desired quantity 
-                into smaller packets for faster convenience. This method eliminates manual labour which 
-                reduce the cost.
+                Neophal uses the latest of technologies for automation in sorting, grading and packing of fruits and vegetables. The use of these technologies eliminates human error and bring efficiency in the process.
                 </h2>
             <Image
                 style={{
