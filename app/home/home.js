@@ -8,9 +8,9 @@ const Home = () => {
     const ref = useRef(null);
     const limValue = 200;
     const {scrollYProgress} = useScroll({target: ref});
-    const v1 = 0.05;
-    const v2 = 0.12;
-    const v3 = 0.46;
+    const v1 = 0.035;
+    const v2 = 0.11;
+    const v3 = 0.5;
     const uVal = 450;
     const vA1 = 420;
     const vA2 = vA1 + uVal;
@@ -20,13 +20,13 @@ const Home = () => {
     const tVal = "97vh";
     const cSize = "39vh"
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
-    const y2Val = useTransform(scrollYProgress, [v2, v1], [800,(limValue - 1)]) // 
+    const y2Val = useTransform(scrollYProgress, [v2, v1], [700,(limValue - 1)]) // 
     const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
     const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
     const xVal = useTransform(scrollYProgress, [v2, 0], [250, 0.1])
-    const sVal = useTransform(scrollYProgress, [0.05, 0.17], [1, 10])
-    const snVal = useTransform(scrollYProgress, [0.18, 0.184], [1, 0])
-    const oVal = useTransform(scrollYProgress, [0.186, 0.20], [0, 1])
+    const sVal = useTransform(scrollYProgress, [0.05, 0.20], [1, 10])
+    const snVal = useTransform(scrollYProgress, [0.22, 0.25], [1, 0])
+    const oVal = useTransform(scrollYProgress, [0.23, 0.27], [0, 1])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
@@ -211,7 +211,7 @@ const Home = () => {
                 <motion.div 
                 style={{
                     top:"-18vh",
-                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "-50vw",
+                    translateX:avalue > 1200 && avalue < 1700 ? 0 : "-50vw",
                     transition:"0.3s"
                 }}
                 className={classes.bimg}>
@@ -220,7 +220,7 @@ const Home = () => {
                         position:'relative',
                         display:"inline"
                      }}
-                     src="/apples.png"
+                     src="/storage.png"
                      width={dim.width < 600 ? dim.width/1.2 :dim.width/2.7}
                      height={dim.height/1.9}
                      alt="neophal-app"
@@ -230,7 +230,7 @@ const Home = () => {
                 className={classes.Plus}>
                     <motion.h1
                     style={{
-                        opacity:avalue > 1000 && avalue < 1500 ? 1 : 0 ,
+                        opacity:avalue > 1200 && avalue < 1700 ? 1 : 0 ,
                         transition:"0.3s"
                     }}
                     >
@@ -240,7 +240,7 @@ const Home = () => {
                 <motion.div
                 style={{
                     top:"-18vh",
-                    translateX:avalue > 1000 && avalue < 1500 ? 0 : "50vw",
+                    translateX:avalue > 1200 && avalue < 1700 ? 0 : "50vw",
                     transition:"0.3s"
                 }}
                 className={classes.bimg}>
@@ -258,11 +258,11 @@ const Home = () => {
                 
                 <motion.div 
                 style={{
-                    scaleY: avalue > 1150 ? 1 : 0 ,
-                    transition:"0.3s"
+                    scaleY: avalue > 1400 ? 1 : 0 ,
+                    transition:"0.2s"
                 }}
                 className={classes.btxt}>
-                &#39;Bringing Horticulture and Ai Together&rsquo;
+                &#39;Bringing AI in Cold Chain&rsquo;
                 </motion.div>
             </div>
             <div className={classes.bBox}>
@@ -294,7 +294,7 @@ const Home = () => {
                        position:'relative',
                        top:dim.width < 600 ? "0vh":"-5vh"
                     }}
-                    src="/CAS-02.png"
+                    src="/CAS-01.png"
                     width={dim.width < 600 ? dim.width/1.2 :dim.width}
                     height={dim.height/1.9}
                     alt="neophal-app"
@@ -307,7 +307,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-6vh",
+                    top:"-20vh",
                     fontSize:"4vh"
                 }}
                 >
@@ -317,7 +317,7 @@ const Home = () => {
                 style={{
                     width:"80vw",
                     position:"relative",
-                    top:"-5vh",
+                    top:"-19vh",
                     fontSize:"2.5vh"
                 }}
                 >
@@ -330,42 +330,13 @@ const Home = () => {
                     position:"relative",
                     top:dim.width < 600 ? "-5vh":"-6vh",
                 }}
-                    src="/PPS-03.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width}
+                    src="/PPSR.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/1.25}
                     height={500}
                     alt="neophal-pps"
                     />
             </div>
-            <div
-             style={{
-                display:"flex",
-                flexDirection:"row",
-                justifyContent:"space-between"
-            }}
-            className={classes.bBox}>
-                <div className={classes.bimg2}>
-                    <h1>
-                    Making <br/>
-                    Earth <br/>
-                    Greener <br/>
-                    and <br/>
-                    People <br/>
-                    Healther <br/>
-                    </h1>
-                </div>
-                <div className= {classes.bimg3}>
-                <video
-                autoPlay
-                onPause={avalue > 2600 ? true : false}
-                loop
-                muted
-                src={require("./Assets/video2.mp4")}
-                type="video/mp4"
-                className={classes.Video2}></video>
-                
-
-                </div>
-            </div>
+            
             <footer 
             className = {classes.Mfooter}
             >

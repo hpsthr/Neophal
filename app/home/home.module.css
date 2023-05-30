@@ -72,7 +72,7 @@ background-color:#9fd1ff;
 }
 
 .Nbbox{
-    height:150vh;
+    height:130vh;
     width:100vw;
     background-color:#9fd1ff;
     display:flex;
@@ -135,7 +135,7 @@ line-height: 13vh;
 
 .Plus{
     position:relative;
-    top:-3vh;
+    top:-12vh;
 }
 
 .Plus h1 {
@@ -144,7 +144,7 @@ font-size:18vh;
 .btxt {
     position:absolute;
     top: 71vh;
-    left: 25vw;
+    left: 34vw;
     font-size:6vh;
     color:rgb(56, 56, 56);
 }
