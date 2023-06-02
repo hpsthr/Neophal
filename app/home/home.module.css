@@ -71,6 +71,16 @@ width:100vw;
 background-color:#9fd1ff;
 }
 
+.Mobile {
+    position:fixed;
+    display:flex;
+    height:100%;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#9fd1ff;
+}
 .Nbbox{
     height:130vh;
     width:100vw;

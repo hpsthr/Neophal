@@ -54,7 +54,44 @@ const Home = () => {
                 type="video/mp4"
                 className={classes.Video}></video>
             <motion.div className={classes.Vidcon}>
-                <h1 className="">
+                {dim.width < 600 ? <div>
+                    <div className={classes.Mobile}>
+                    <Image
+                    style={{
+                        position:"relative",
+                        
+                    }}
+                        src="/logo.png"
+                        width={dim.width < 600 ? dim.width/5 :dim.width/9}
+                        height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
+                        alt="neophal-pps"
+                    />
+                    <h1
+                    style={{
+                        fontSize:"6vh",
+                        color:"white"
+                    }}
+                    >
+                        Neophal
+                    </h1>
+                    <h2
+                    style=
+                    {{
+                        fontSize:"3vh",
+                        color:"white",
+                        width:"80vw",
+                        textAlign:"center"
+                    }}
+                    >
+                        Visit our Desktop Website Mobile site is work in progress 
+
+                    </h2>
+                    </div>
+
+
+                </div> : 
+                <div>
+                    <h1 className="">
 
                     <span>
                         <motion.svg
@@ -93,7 +130,7 @@ const Home = () => {
                             scale: sVal,
                             opacity: snVal,
                             pointerEvents:"none",
-                            // transition:"0.1s",
+                            // transition:"0.2s",
                             // transitionTimingFunction: "ease-in ease-out"
 
                         }}
@@ -151,7 +188,9 @@ const Home = () => {
                                 fill={mColor}/>
                         </motion.svg>
                     </span>
-                </h1>
+                </h1>   
+                </div>}
+                
             </motion.div>
            
                 
