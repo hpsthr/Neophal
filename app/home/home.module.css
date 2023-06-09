@@ -81,7 +81,7 @@ background-color:#9fd1ff;
 
 .Slide1 {
     position:relative;
-    top:24vh;
+    height:100vh;
     display:flex;
     flex-direction: row;
     justify-content: center;
