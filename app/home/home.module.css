@@ -229,10 +229,18 @@ letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 750;
     font-size: 12vh;
+    height:11.8vh;
     line-height: 80%;
     letter-spacing: -0.02em;
+    
     color: #F0494B;
+    overflow:hidden;
+    
 
+}
+.Sl4b2 h1 span{
+    display:inline-block;
+    transition:0.5s cubic-bezier(0.89, 0.01, 0.05, 0.95);
 }
 .Sl4b2 h2 {
     margin-top:8vh;
@@ -251,9 +259,16 @@ letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 750;
     font-size: 12vh;
+    height:11.8vh;
     line-height: 80%;
     letter-spacing: -0.02em;
     color: #F0494B;
+    overflow:hidden;
+}
+
+.Sl5b1 h1 span{
+    display:inline-block;
+    transition:0.5s cubic-bezier(0.89, 0.01, 0.05, 0.95);
 }
 .Sl5b1 h2 {
     margin-top:8vh;

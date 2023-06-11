@@ -18,6 +18,8 @@ const Home = () => {
     const vA4 = vA3 + uVal;
     const vA5 = vA4 + uVal;
     const faVal = 640;
+    const faVal2 = 2000;
+    const faVal3 = 2600;
     const tVal = "97vh";
     const cSize = "30vh"
     const dSize = "17vh"
@@ -227,73 +229,33 @@ const Home = () => {
                     height={dim.width < 600 ? dim.height/1.4 : dim.width/8}
                     alt="neophal-pps"
                     />
-                    <motion.h1
-                    
-                    >
-                        <motion.span
+                    <motion.h1><motion.span
                         style={{
-                            display:"inline-block",
-                            translateY: fixVal.current >= faVal ? 0 : "15vh",
-                            transition:"0.4s",
-                        }}
-                        >
+                        display:"inline-block",
+                        translateY: fixVal.current >= faVal ? 0 : "15vh",
+                        transition:"0.4s",
+                        }}>
                             About
-                        </motion.span>
-                    </motion.h1>
+                        </motion.span></motion.h1>
                     <div>
-                    <motion.h2
-                    
-                    >
-                       <motion.span
-                        style={{
-                            
-                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
-                            
-                        }}
-                        >
+                    <motion.h2><motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
                     With an aim to reduce food wastage, Neophal&#39;s innovations in 
-                    </motion.span> 
-                    </motion.h2>
-                    <motion.h2> <motion.span
-                        style={{
-                            
-                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
-                            
-                        }}>
-                    cold storage and primary processing technologies has the </motion.span> 
-                    </motion.h2>
-                    <motion.h2> <motion.span
-                        style={{
-                            
-                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
-                            
-                        }}>
-                     potential to bring radical changes in the sector. With these</motion.span> 
-                    </motion.h2>
-                    <motion.h2> <motion.span
-                        style={{
-                            
-                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
-                            
-                        }}>
-                     innovations, growers would have access to quality storage and </motion.span> 
-                    </motion.h2>
-                    <motion.h2> <motion.span
-                        style={{
-                            
-                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
-                            
-                        }}>
-                     high-tech grading and packing solutions at their farmgate. This </motion.span> 
-                    </motion.h2>
-                    <motion.h2> <motion.span
-                        style={{
-                            
-                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
-                            
-                        }}>
-                     in turn would help them get better realisation of their produce.  </motion.span> 
-                    </motion.h2>
+                    </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                    cold storage and primary processing technologies has the 
+                    </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                     potential to bring radical changes in the sector. With these
+                     </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                     innovations, growers would have access to quality storage and 
+                     </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                     high-tech grading and packing solutions at their farmgate. This 
+                     </motion.span> </motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                     in turn would help them get better realisation of their produce.  
+                     </motion.span> </motion.h2>
                     </div>
                     
                     </div>
@@ -341,13 +303,22 @@ const Home = () => {
                 </div>
             
                 <div className={classes.Sl4b2} >
-                <h1
-                
-                >
-                    Dynamic Controlled 
-                    Atmosphere Storage 
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2 ? 0 : "13vh",}} >
+                    Dynamic
+                </motion.span></h1>
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2 +10 ? 0 : "13vh",}} >
+                    Controlled 
+                </motion.span></h1>
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2+20 ? 0 : "13vh",}} >
+                    Atmosphere
+                </motion.span></h1>
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : "13vh",}} >
+                    Storage
+                </motion.span></h1>
+                     
+                      
 
-                </h1>
+                
                 <h2 
                 
                 >
@@ -360,11 +331,15 @@ const Home = () => {
             </div>
             <div className={classes.Slide5}>
                 <div className={classes.Sl5b1}>
-                <h1
-                
-                >
-                    Primary Processing Solutions
-                </h1>
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3 ? 0 : "13vh",}} >
+                    Primary
+                </motion.span></h1>
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3 +10 ? 0 : "13vh",}} >
+                    Processing
+                </motion.span></h1>
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3+20 ? 0 : "13vh",}} >
+                    Solutions
+                </motion.span></h1>
                 <h2 
                 
                 >
