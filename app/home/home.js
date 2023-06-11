@@ -26,13 +26,16 @@ const Home = () => {
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
     const y2Val = useTransform(scrollYProgress, [v2, v1], [700,(limValue - 1)]) // 
     const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
+    const appleVal = useTransform(scrollYProgress, [0.20, 0.37], [0, 320])
     const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
     const xVal = useTransform(scrollYProgress, [v2, 0], [250, 0.1])
     // const sVal = useTransform(scrollYProgress, [0.05, 0.20], [1, 10])
     // const snVal = useTransform(scrollYProgress, [0.22, 0.25], [1, 0])
     const sVal = 1
     const snVal = 1
-    const oVal = useTransform(scrollYProgress, [0.26, 0.28], [0, 1])
+    
+    const oVal2 = useTransform(scrollYProgress, [0.73, 0.75], [0, 1])
+    const oVal3 = useTransform(scrollYProgress, [0.93, 0.95], [0, 1])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
@@ -201,34 +204,39 @@ const Home = () => {
                     />
                     </div>
                     <div className={classes.Sl2b2}>
-                    <Image
+                    <motion.div
                     style={{
-                    position:"absolute",
-                    top:"0vh",
-                    left:"82vw",
-                    zIndex:0,
-                    opacity:oVal
-                    
-                }}
+                        position:"absolute",
+                        top:"0vh",
+                        left:"82vw",
+                        zIndex:0,
+                        translateY:0
+                    }}
+                    >
+                    <Image
                     src="/img_021.png"
                     width={dim.width < 600 ? dim.width/1.4 :dim.width/5.6}
                     height={dim.width < 600 ? dim.height/1.4 : dim.width/6}
                     alt="neophal-pps"
                     />
-                    <Image
+                    </motion.div>
+                    <motion.div
                     style={{
-                    position:"absolute",
-                    top:"25vh",
-                    left:"0vw",
-                    zIndex:2,
-                    
-                    
-                }}
+                        position:"absolute",
+                        top:"10vh",
+                        left:"0vw",
+                        zIndex:2,
+                        translateY:appleVal,
+                        transition:"0.1s",
+                        transitionTimingFunction: "ease-in ease-out"
+                        }}>
+                    <Image
                     src="/img_03.png"
                     width={dim.width < 600 ? dim.width/1.4 :dim.width/8}
                     height={dim.width < 600 ? dim.height/1.4 : dim.width/8}
                     alt="neophal-pps"
                     />
+                    </motion.div>
                     <motion.h1><motion.span
                         style={{
                         display:"inline-block",
@@ -294,6 +302,11 @@ const Home = () => {
             </div>
             <div className={classes.Slide4}>
                 <div className={classes.Sl4b1}>
+                    <motion.div className={classes.ImgAnimation1}
+                    style={{
+                        translateX: fixVal.current > 2000 ? "50vw" : 0,
+                    }}
+                    ></motion.div>
                 <Image
                     src="/img_052.png"
                     width={dim.width < 600 ? dim.width/1.2 :dim.width/1.8}
@@ -315,16 +328,9 @@ const Home = () => {
                 <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : "13vh",}} >
                     Storage
                 </motion.span></h1>
-                     
-                      
-
-                
-                <h2 
-                
-                >
-                Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storages to provide the ideal environment for the produce to survive long and be healthy without losing any of their nutritional content. The conditions of the atmosphere including temperature, moisture, oxygen and other critical elements are dynamically controlled to preserve the quality of the fruits stored inside these storages.                </h2>
-                
-
+                <motion.h2 style={{opacity:oVal2}}>
+                Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storages to provide the ideal environment for the produce to survive long and be healthy without losing any of their nutritional content. The conditions of the atmosphere including temperature, moisture, oxygen and other critical elements are dynamically controlled to preserve the quality of the fruits stored inside these storages.                
+                </motion.h2>
                 </div>
                                 
                     
@@ -340,18 +346,20 @@ const Home = () => {
                 <h1><motion.span style={{translateY: fixVal.current >= faVal3+20 ? 0 : "13vh",}} >
                     Solutions
                 </motion.span></h1>
-                <h2 
-                
-                >
+                <motion.h2 style={{opacity:oVal3}}>
                 Neophal uses the latest of technologies for automation in sorting, grading and packing of fruits and vegetables. The use of these technologies eliminates human error and bring efficiency in the process.
-                </h2>
+                </motion.h2>
                 </div>
                 <div className={classes.Sl5b2}>
+                <motion.div className={classes.ImgAnimation1}
+                style={{translateX: fixVal.current > 2600 ? "-50vw" : 0,}}>
+                </motion.div>
+
                 <Image
                 
                     src="/img_062.png"
                     width={dim.width < 600 ? dim.width/1.4 :dim.width/1.8}
-                    height={dim.height}
+                    height={dim.height} 
                     alt="neophal-pps"
                     />
                 </div>
