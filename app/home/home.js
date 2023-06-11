@@ -17,6 +17,7 @@ const Home = () => {
     const vA3 = vA2 + uVal;
     const vA4 = vA3 + uVal;
     const vA5 = vA4 + uVal;
+    const faVal = 640;
     const tVal = "97vh";
     const cSize = "30vh"
     const dSize = "17vh"
@@ -29,7 +30,7 @@ const Home = () => {
     // const snVal = useTransform(scrollYProgress, [0.22, 0.25], [1, 0])
     const sVal = 1
     const snVal = 1
-    const oVal = useTransform(scrollYProgress, [0.22, 0.25], [0, 1])
+    const oVal = useTransform(scrollYProgress, [0.26, 0.28], [0, 1])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
@@ -181,8 +182,7 @@ const Home = () => {
                     <Image
                 style={{
                     position:"relative",
-                    
-                }}
+                    }}
                     src="/logo2.png"
                     width={dim.width < 600 ? dim.width/1.4 :dim.width/10}
                     height={dim.width < 600 ? dim.height/1.4 : dim.width/10}
@@ -205,6 +205,7 @@ const Home = () => {
                     top:"0vh",
                     left:"82vw",
                     zIndex:0,
+                    opacity:oVal
                     
                 }}
                     src="/img_021.png"
@@ -219,24 +220,82 @@ const Home = () => {
                     left:"0vw",
                     zIndex:2,
                     
+                    
                 }}
                     src="/img_03.png"
                     width={dim.width < 600 ? dim.width/1.4 :dim.width/8}
                     height={dim.width < 600 ? dim.height/1.4 : dim.width/8}
                     alt="neophal-pps"
                     />
-                    <h1>
-                        About
-                    </h1>
-                    <motion.h2
-                    style={{
-                        opacity:oVal  
-                      }}
+                    <motion.h1
+                    
                     >
-                    With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.
-
-
+                        <motion.span
+                        style={{
+                            display:"inline-block",
+                            translateY: fixVal.current >= faVal ? 0 : "15vh",
+                            transition:"0.4s",
+                        }}
+                        >
+                            About
+                        </motion.span>
+                    </motion.h1>
+                    <div>
+                    <motion.h2
+                    
+                    >
+                       <motion.span
+                        style={{
+                            
+                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
+                            
+                        }}
+                        >
+                    With an aim to reduce food wastage, Neophal&#39;s innovations in 
+                    </motion.span> 
                     </motion.h2>
+                    <motion.h2> <motion.span
+                        style={{
+                            
+                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
+                            
+                        }}>
+                    cold storage and primary processing technologies has the </motion.span> 
+                    </motion.h2>
+                    <motion.h2> <motion.span
+                        style={{
+                            
+                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
+                            
+                        }}>
+                     potential to bring radical changes in the sector. With these</motion.span> 
+                    </motion.h2>
+                    <motion.h2> <motion.span
+                        style={{
+                            
+                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
+                            
+                        }}>
+                     innovations, growers would have access to quality storage and </motion.span> 
+                    </motion.h2>
+                    <motion.h2> <motion.span
+                        style={{
+                            
+                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
+                            
+                        }}>
+                     high-tech grading and packing solutions at their farmgate. This </motion.span> 
+                    </motion.h2>
+                    <motion.h2> <motion.span
+                        style={{
+                            
+                            translateY: fixVal.current >= faVal+30 ? 0 : "3vh",
+                            
+                        }}>
+                     in turn would help them get better realisation of their produce.  </motion.span> 
+                    </motion.h2>
+                    </div>
+                    
                     </div>
 
                 </div>
