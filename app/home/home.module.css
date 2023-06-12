@@ -10,6 +10,10 @@
     font-family: 'Neurial Grotesk';
     src: url('./font/NeurialGrotesk.woff') format('woff');
     }
+@font-face { 
+    font-family: 'Neurial Grotesk R';
+    src: url('./font/NeurialGroteskR.woff') format('woff');
+    }
 
 
 
@@ -107,6 +111,7 @@ background-color:#9fd1ff;
 }
 
 .Sl2b1 {
+    z-index: 2;
 position:relative;
 height:55vh;
 }
@@ -119,7 +124,7 @@ height:55vh;
 position:relative;
 width:100vw;
 height:48vh;
-background-color: white;
+background-color:#F0F0F0;
 }
 
 .Sl2b2 h1 {
@@ -141,7 +146,6 @@ letter-spacing: -0.02em;
     width:38vw;
     font-family: 'Neurial Grotesk';
     font-size: 2.6vh;
-    color:#9FD1FF;
     font-weight: 600;
     line-height: 3.3vh;
     color: #363636;
@@ -160,17 +164,19 @@ letter-spacing: -0.02em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color:white;
 }
 
 
 .Sl3b1 {
     position: relative;
-    height:45vh;
-    width:100vw;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    height: 48vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
 }
 .Sl3b1 h1{
     position:relative;
@@ -181,18 +187,48 @@ letter-spacing: -0.02em;
     font-weight: 700;
     text-transform: uppercase;
     width: 50vw;
-    left:15vw;
+    left:3vw;
+    letter-spacing: -0.02em;
+    overflow: hidden;
+    
+}
 
-
-letter-spacing: -0.02em;
+.Sl3b1 h1 span{
+    display:inline-block;
+    transition:0.8s cubic-bezier(0.57, 0.14, 0.55, 1.25)  
+}
+.Sl3b1 h2{
+    position:relative;
+    width:37vw;
+    height:2.5vh;
+    font-family: 'Neurial Grotesk R';
+    font-size: 2.4vh;
+    font-weight: 300;
+    line-height: 90%;
+    color: #F0494B;
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    overflow:hidden;
+}
+.Sl3b1 h2 span{
+    display:inline-block;
+    transition:0.8s cubic-bezier(0.57, 0.14, 0.55, 1.25)
 }
 .Sl3b2 {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
+    
 }
-
+.Sl3b2 img {
+    position:realtive;
+    bottom:3vw;
+    height:66vh;
+    width:94vw;
+    border-radius: 10px;
+}
 
 .Slide4 {
     position:relative;
@@ -221,7 +257,7 @@ letter-spacing: -0.02em;
     background-color: #f0f0f0;
     height:100vh;
     width:50vw;
-    transition:0.6s cubic-bezier(0.89, 0.01, 0.05, 0.95);
+    transition:0.6s cubic-bezier(0.47, 0.02, 0.23, 0.86);
     
 
 }
@@ -234,6 +270,7 @@ letter-spacing: -0.02em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .Sl4b2 h1 {
@@ -253,7 +290,7 @@ letter-spacing: -0.02em;
 }
 .Sl4b2 h1 span{
     display:inline-block;
-    transition:0.5s cubic-bezier(0.89, 0.01, 0.05, 0.95);
+    transition:0.5s cubic-bezier(0.57, 0.14, 0.55, 1.25)
 }
 .Sl4b2 h2 {
     margin-top:8vh;
@@ -281,7 +318,7 @@ letter-spacing: -0.02em;
 
 .Sl5b1 h1 span{
     display:inline-block;
-    transition:0.5s cubic-bezier(0.89, 0.01, 0.05, 0.95);
+    transition:0.5s cubic-bezier(0.57, 0.14, 0.55, 1.25)
 }
 .Sl5b1 h2 {
     margin-top:8vh;

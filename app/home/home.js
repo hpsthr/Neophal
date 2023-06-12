@@ -1,10 +1,16 @@
 import {compiler} from "@/next.config";
 import classes from "./home.module.css"
 import Image from "next/image"
-import {useTransform, motion, useScroll} from "framer-motion"
-import {useState, useEffect, useRef} from 'react'
+import {useTransform, motion, useScroll,useMotionValue} from "framer-motion"
+import {useState, useEffect, useRef,} from 'react'
+
 
 const Home = () => {
+    const x = useMotionValue(100);
+    const y = useMotionValue(100);
+
+    const rotateX = useTransform(x, [0, 1920], [100, 0]);
+    const rotateY = useTransform(y, [0, 1920], [100, 0]);
     const ref = useRef(null);
     const limValue = 200;
     const {scrollYProgress} = useScroll({target: ref});
@@ -20,9 +26,12 @@ const Home = () => {
     const faVal = 640;
     const faVal2 = 2000;
     const faVal3 = 2600;
+    const faVal4 = 900;
     const tVal = "97vh";
     const cSize = "30vh"
     const dSize = "17vh"
+    let mxPosition = 0;
+    let myPosition = 0;
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
     const y2Val = useTransform(scrollYProgress, [v2, v1], [700,(limValue - 1)]) // 
     const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
@@ -34,14 +43,21 @@ const Home = () => {
     const sVal = 1
     const snVal = 1
     
-    const oVal2 = useTransform(scrollYProgress, [0.73, 0.75], [0, 1])
-    const oVal3 = useTransform(scrollYProgress, [0.93, 0.95], [0, 1])
+    const oVal2 = useTransform(scrollYProgress, [0.73, 0.74], [0, 1])
+    const oVal3 = useTransform(scrollYProgress, [0.93, 0.94], [0, 1])
     const mColor = "white"
     const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
     const [avalue,setAvalue] = useState(0)
     const [dim, setDim] = useState({width:0, height:0})
-   
+    
+    const handleMouse = (event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        x.set(event.clientX + rect.left);
+        y.set(event.clientY+ rect.top);
+        
+        
+    }
 
     useEffect(() => {
         setDim({width:window.innerWidth, height:window.innerHeight})
@@ -49,7 +65,6 @@ const Home = () => {
             setYvalue(yVal.current > limValue - 1 ? y2Val.current: yVal.current);
             setAvalue(fixVal.current);
             setDim({width:window.innerWidth, height:window.innerHeight})
-            console.log(fixVal.current)
         })}, [])
 
     return (
@@ -176,23 +191,13 @@ const Home = () => {
                 >
                     
                     <div className={classes.Sl2b1}>
-                    <motion.div
-                    className={classes.Logo}
-                    style={{
-                      opacity:1 
-                    }}
-                    >
-
-                    
-                    <Image
-                style={{
-                    position:"relative",
-                    }}
-                    src="/logo2.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/10}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.width/10}
-                    alt="neophal-pps"
-                    />
+                    <motion.div className={classes.Logo} style={{opacity:1 }}>
+                        <Image style={{position:"relative"}}
+                        src="/logo2.png"
+                        width={dim.width < 600 ? dim.width/1.4 :dim.width/10}
+                        height={dim.width < 600 ? dim.height/1.4 : dim.width/10}
+                        alt="neophal-pps"
+                        />
                     
                     
                     </motion.div>
@@ -203,43 +208,43 @@ const Home = () => {
                     alt="neophal-pps"
                     />
                     </div>
-                    <div className={classes.Sl2b2}>
+                    <motion.div className={classes.Sl2b2} onMouseMove={handleMouse}>
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:"0vh",
+                        top:"-19vh",
                         left:"82vw",
                         zIndex:0,
-                        translateY:0
+                        rotateZ:186,
+                        translateY:rotateY,
+                        translateX:rotateX
                     }}
                     >
                     <Image
-                    src="/img_021.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/5.6}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.width/6}
+                    src="/img_033.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/4}
+                    height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
                     alt="neophal-pps"
                     />
                     </motion.div>
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:"10vh",
-                        left:"0vw",
-                        zIndex:2,
-                        translateY:appleVal,
-                        transition:"0.1s",
-                        transitionTimingFunction: "ease-in ease-out"
+                        top:"32vh",
+                        left:"-6vw",
+                        zIndex:0,
+                        rotateZ:5,
+                        translateY:rotateX,
+                        translateX:rotateY
                         }}>
                     <Image
-                    src="/img_03.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/8}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.width/8}
+                    src="/img_033.png"
+                    width={dim.width < 600 ? dim.width/1.4 :dim.width/4}
+                    height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
                     alt="neophal-pps"
                     />
                     </motion.div>
-                    <motion.h1><motion.span
-                        style={{
-                        display:"inline-block",
+                    <motion.h1><motion.span style={{ display:"inline-block",
                         translateY: fixVal.current >= faVal ? 0 : "15vh",
                         transition:"0.4s",
                         }}>
@@ -266,18 +271,38 @@ const Home = () => {
                      </motion.span> </motion.h2>
                     </div>
                     
-                    </div>
+                    </motion.div>
 
                 </div>
             
             <div
             className={classes.Slide3}>
-                <div className={classes.Sl3b1}>
                 
-                <h1>
-                &#39;Bringing AI in <br/>
-                 Cold Chain&rsquo;
-                </h1>
+                <div className={classes.Sl3b1}>
+                    <div>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "15vh"}}>
+                        Bringing AI in
+                    </motion.span></motion.h1>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "15vh"}}>
+                        Cold Chain
+                    </motion.span></motion.h1>
+                    </div>
+                <div
+                style={{position:"relative", top: "6vh", left: "8vw"}}
+                >
+                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
+                AI technology integrates into temperature-sensitive product 
+                </motion.span></motion.h2>
+                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
+                transportation and storage, enhancing efficiency and minimizing 
+                </motion.span></motion.h2>
+                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
+                spoilage. Real-time monitoring and predictive modeling enable optimal
+                </motion.span></motion.h2>
+                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
+                temperature control, ensuring product safety and preventing losses.  
+                </motion.span></motion.h2>
+                </div>
                 
                 
                 </div>
