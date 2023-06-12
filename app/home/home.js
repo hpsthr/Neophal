@@ -212,7 +212,7 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:"-19vh",
+                        top:"-22vh",
                         left:"82vw",
                         zIndex:0,
                         rotateZ:186,
