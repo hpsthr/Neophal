@@ -380,7 +380,7 @@ const Home = () => {
                 </div>
                 <div className={classes.Sl5b2}>
                 <motion.div className={classes.ImgAnimation1}
-                style={{translateX: fixVal.current > 2600 ? "-50vw" : 0,}}>
+                style={{translateX: fixVal.current > 2600 ? "-50vw" : 0,backgroundColor:"white"}}>
                 </motion.div>
 
                 <Image

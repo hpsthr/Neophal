@@ -237,6 +237,7 @@ letter-spacing: -0.02em;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    background-color:#F0F0F0;
 }
 
 .Sl4b1{
@@ -339,6 +340,7 @@ letter-spacing: -0.02em;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    background-color: white;
 }
 
 .Sl5b2{
