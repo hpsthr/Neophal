@@ -6,11 +6,7 @@ import {useState, useEffect, useRef,} from 'react'
 
 
 const Home = () => {
-    const x = useMotionValue(100);
-    const y = useMotionValue(100);
-
-    const rotateX = useTransform(x, [0, 1920], [100, 0]);
-    const rotateY = useTransform(y, [0, 1920], [100, 0]);
+    
     const ref = useRef(null);
     const limValue = 200;
     const {scrollYProgress} = useScroll({target: ref});
@@ -51,13 +47,7 @@ const Home = () => {
     const [avalue,setAvalue] = useState(0)
     const [dim, setDim] = useState({width:0, height:0})
     
-    const handleMouse = (event) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        x.set(event.clientX + rect.left);
-        y.set(event.clientY+ rect.top);
-        
-        
-    }
+    
 
     useEffect(() => {
         setDim({width:window.innerWidth, height:window.innerHeight})
@@ -66,6 +56,17 @@ const Home = () => {
             setAvalue(fixVal.current);
             setDim({width:window.innerWidth, height:window.innerHeight})
         })}, [])
+        const x = useMotionValue(100);
+        const y = useMotionValue(100);
+        const rotateX = useTransform(x, [0, dim.width], [100, 0]);
+        const rotateY = useTransform(y, [0, dim.height], [100, 0]);
+
+        const handleMouse = (event) => {
+            const rect = event.currentTarget.getBoundingClientRect();
+            x.set(event.clientX + rect.left);
+            y.set(event.clientY+ rect.top);
+            }
+
 
     return (
 
