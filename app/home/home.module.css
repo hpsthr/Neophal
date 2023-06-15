@@ -738,7 +738,7 @@ border-radius:14px;
     }
     .Sl3b1 h2 span{
         display:inline-block;
-        transition:0.8s cubic-bezier(0.57, 0.14, 0.55, 1.25)
+        transition:0.8s ease-in-out;
     }
     .Sl3b2 {
         position: relative;
@@ -808,14 +808,17 @@ border-radius:14px;
      .Sl4b2 h1 span{
         position: relative;
         top:0.25vh;
+        transition:0.8s ease-in-out;
     }
      .Sl5b1 h1 span{
         position: relative;
         top:0.25vh;
+        transition:0.8s ease-in-out;
     }
      .Sl3b1 h1 span{
         position: relative;
         top:0.25vh;
+        transition:0.8s ease-in-out;
     }
     .Sl4b2 h2 {
         margin-top:1vh;
