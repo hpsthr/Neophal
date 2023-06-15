@@ -24,7 +24,7 @@ const Home = () => {
     const faVal3 = 2600;
     const faVal4 = 900;
     const tVal = "97vh";
-    const cSize = "30vh"
+    
     const dSize = "17vh"
     let mxPosition = 0;
     let myPosition = 0;
@@ -60,7 +60,7 @@ const Home = () => {
         const y = useMotionValue(100);
         const rotateX = useTransform(x, [0, dim.width], [100, 0]);
         const rotateY = useTransform(y, [0, dim.height], [100, 0]);
-
+        const cSize = dim.width <= 600 ? "16vw" :  "29vh";
         const handleMouse = (event) => {
             const rect = event.currentTarget.getBoundingClientRect();
             x.set(event.clientX + rect.left);
@@ -79,42 +79,7 @@ const Home = () => {
                 type="video/mp4"
                 className={classes.Video}></video>
             <motion.div className={classes.Vidcon}>
-                {dim.width < 600 ? <div>
-                    <div className={classes.Mobile}>
-                    <Image
-                    style={{
-                        position:"relative",
-                        
-                    }}
-                        src="/logo.png"
-                        width={dim.width < 600 ? dim.width/5 :dim.width/9}
-                        height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
-                        alt="neophal-pps"
-                    />
-                    <h1
-                    style={{
-                        fontSize:"6vh",
-                        color:"white"
-                    }}
-                    >
-                        Neophal
-                    </h1>
-                    <h2
-                    style=
-                    {{
-                        fontSize:"3vh",
-                        color:"white",
-                        width:"80vw",
-                        textAlign:"center"
-                    }}
-                    >
-                        Visit our Desktop Website Mobile site is work in progress 
-
-                    </h2>
-                    </div>
-
-
-                </div> : 
+                
                 <div>
                     <h1 className={classes.Slide1}>
 
@@ -124,41 +89,14 @@ const Home = () => {
                     <span 
                    
                     >
-                    <motion.div
-                        style={{
-                            display:"block",
-                            backgroundColor:"#E9373D",
-                            position:"relative",
-                            width:dSize,
-                            height:dSize,
-                            top: "13.7vh",
-                            left:"4.2vw",
-                            
-                            zIndex:2,
-                            borderRadius:"50%",
-                            // translateY: yvalue >= (limValue - 1)
-                            //     ? y2Val
-                            //     : yVal,
-                            // translateX: dim.width <= 600 ? xVal.current/2.5 : xVal,
-                            scale: sVal,
-                            opacity: snVal,
-                            pointerEvents:"none",
-                            // transition:"0.2s",
-                            // transitionTimingFunction: "ease-in ease-out"
-
-                        }}
-                        >
-
-                        </motion.div>
+                    
                         <motion.div
                         style={{
                             display:"block",
-                            backgroundColor:"white",
                             position:"relative",
                             width:cSize,
                             height:cSize,
-                            top: "-10vh",
-                            left:"0vw",
+                            
                             marginLeft:"1vw",
                             zIndex:1,
                             borderRadius:"50%",
@@ -174,6 +112,9 @@ const Home = () => {
 
                         }}
                         >
+                            <svg width= {cSize} height={cSize} viewBox="0 0 247 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M123.718 246.692C191.734 246.692 246.871 191.555 246.871 123.539C246.871 55.5234 191.734 0.385742 123.718 0.385742C55.7021 0.385742 0.564453 55.5234 0.564453 123.539C0.564453 191.555 55.7021 246.692 123.718 246.692ZM124.222 184.106C157.672 184.106 184.789 156.763 184.789 123.034C184.789 89.3051 157.672 61.9622 124.222 61.9622C90.7718 61.9622 63.6549 89.3051 63.6549 123.034C63.6549 156.763 90.7718 184.106 124.222 184.106Z" fill="white"/>
+                            </svg>
 
                         </motion.div>
                         
@@ -182,7 +123,7 @@ const Home = () => {
                         PHAL
                     </span>
                 </h1>   
-                </div>}
+                </div>
                 
             </motion.div>
            
@@ -195,17 +136,18 @@ const Home = () => {
                     <motion.div className={classes.Logo} style={{opacity:1 }}>
                         <Image style={{position:"relative"}}
                         src="/logo2.png"
-                        width={dim.width < 600 ? dim.width/1.4 :dim.width/10}
-                        height={dim.width < 600 ? dim.height/1.4 : dim.width/10}
+                        width={dim.width < 600 ? dim.width/4 :dim.width/10}
+                        height={dim.width < 600 ? dim.height/4 : dim.width/10}
                         alt="neophal-pps"
                         />
                     
                     
                     </motion.div>
+                    
                     <Image
                     src="/img_01.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.height}
+                    width={dim.width < 600 ? dim.height/2 :dim.width}
+                    height={dim.width < 600 ? dim.width/2 : dim.height}
                     alt="neophal-pps"
                     />
                     </div>
@@ -219,7 +161,8 @@ const Home = () => {
                         zIndex:0,
                         rotateZ:186,
                         translateY:rotateY,
-                        translateX:rotateX
+                        translateX:rotateX,
+                        opacity:dim.width < 600 ? 0 : 1 ,
                     }}
                     >
                     <Image
@@ -238,7 +181,8 @@ const Home = () => {
                         zIndex:0,
                         rotateZ:5,
                         translateY:rotateX,
-                        translateX:rotateY
+                        translateX:rotateY,
+                        opacity:dim.width < 600 ? 0 : 1 ,
                         }}>
                     <Image
                     src="/img_033.png"
@@ -291,7 +235,7 @@ const Home = () => {
                     </motion.span></motion.h1>
                     </div>
                 <div
-                style={{position:"relative", top: "6vh", left: "8vw"}}
+                style={{position:"relative", top: dim.width < 600 ? 0 :"6vh", left:dim.width < 600 ? 0 : "8vw"}}
                 >
                 <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
                 AI technology integrates into temperature-sensitive product 
@@ -317,7 +261,7 @@ const Home = () => {
                         position:'relative',
                         display:"inline"
                      }}
-                     src="/img_04.png"
+                     src={dim.width < 600 ? "/img_04m.png" : "/img_04.png"}
                      width={dim.width < 600 ? dim.width/1.2 :dim.width}
                      height={dim.height/1.9}
                      alt="neophal-app"
@@ -332,7 +276,7 @@ const Home = () => {
                 <div className={classes.Sl4b1}>
                     <motion.div className={classes.ImgAnimation1}
                     style={{
-                        translateX: fixVal.current > 2000 ? "50vw" : 0,
+                        translateX: fixVal.current > 2000 ? dim.width < 600 ? "100vw" : "50vw" : 0,
                     }}
                     ></motion.div>
                 <Image
@@ -380,7 +324,7 @@ const Home = () => {
                 </div>
                 <div className={classes.Sl5b2}>
                 <motion.div className={classes.ImgAnimation1}
-                style={{translateX: fixVal.current > 2600 ? "-50vw" : 0,backgroundColor:"white"}}>
+                style={{translateX: fixVal.current > 2600 ? dim.width < 600 ? "-100vw" : "-50vw" : 0 ,backgroundColor:"white"}}>
                 </motion.div>
 
                 <Image
