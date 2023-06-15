@@ -713,20 +713,7 @@ border-radius:14px;
         display:flex;
         flex-direction: column;
     }
-    .Sl3b1 h1{
-        
-        font-size: 6.5vh;
-        height:7vh;
-        overflow: scroll;
-        color: #F0494B;
-        
-        text-align: center;
-        width: 95vw;
-        left:0vw;
-        letter-spacing: -0.02em;
-        overflow: hidden;
-        
-    }
+    
     
     
     .Sl3b1 h2{
@@ -800,23 +787,36 @@ border-radius:14px;
     .Sl4b2 h1 {
         width:95vw;
         font-size: 6.5vh;
-        height:7vh;
-        overflow: scroll;
+        height:7.5vh;
+        
         
      }
+     .Sl3b1 h1{
+        font-size: 6.5vh;
+        height:7.5vh;
+        width: 95vw;
+        left:0vw;
+    }
+
+    .Sl5b1 h1 {
+        width:95vw;
+        font-size: 6.5vh;
+        height:7.5vh;
+        overflow: scroll;
+    }
      .Sl4b2 h1 span{
         position: relative;
-        top:0.5vh;
+        top:0.75vh;
         transition:0.6s ease-in-out;
     }
      .Sl5b1 h1 span{
         position: relative;
-        top:0.5vh;
+        top:0.75vh;
         transition:0.6s ease-in-out;
     }
      .Sl3b1 h1 span{
         position: relative;
-        top:0.5vh;
+        top:0.75vh;
         transition:0.6s ease-in-out;
     }
     .Sl4b2 h2 {
@@ -828,12 +828,7 @@ border-radius:14px;
     }
     
     
-    .Sl5b1 h1 {
-        width:95vw;
-        font-size: 6.5vh;
-        height:7vh;
-        overflow: scroll;
-    }
+    
     
     
     .Sl5b1 h2 {
