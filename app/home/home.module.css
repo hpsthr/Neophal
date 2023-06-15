@@ -310,7 +310,6 @@ letter-spacing: -0.02em;
 
 .Slide5 {
     position:relative;
-    
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -807,17 +806,17 @@ border-radius:14px;
      }
      .Sl4b2 h1 span{
         position: relative;
-        
+        top:0.5vh;
         transition:0.6s ease-in-out;
     }
      .Sl5b1 h1 span{
         position: relative;
-        
+        top:0.5vh;
         transition:0.6s ease-in-out;
     }
      .Sl3b1 h1 span{
         position: relative;
-        
+        top:0.5vh;
         transition:0.6s ease-in-out;
     }
     .Sl4b2 h2 {
@@ -889,5 +888,6 @@ border-radius:14px;
         line-height:10vh;
         color:#bedeff;
     }
+    
     
 }
