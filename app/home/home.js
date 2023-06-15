@@ -155,13 +155,13 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:dim.width < 600 ? "-20vh" :"-22vh",
-                        left:dim.width < 600 ? "45vw" :"82vw",
+                        top:dim.width < 600 ? "-12vh" :"-22vh",
+                        left:dim.width < 600 ? "70vw" :"82vw",
                         width:dim.width < 600 ? dim.width/2.5 : dim.width/4.5,
                         zIndex:0,
                         rotateZ:186,
-                        translateY:rotateY,
-                        translateX:rotateX,
+                        translateY:dim.width < 600 ? 0 : rotateY,
+                        translateX:dim.width < 600 ? 0 : rotateX,
                         
                     }}
                     >
@@ -175,13 +175,13 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:dim.width < 600 ? "33vh" :"27vh",
-                        left:dim.width < 600 ? "-20vw" :"-6vw",
+                        top:dim.width < 600 ? "42vh" :"27vh",
+                        left:dim.width < 600 ? "-4vw" :"-6vw",
                         width:dim.width < 600 ? dim.width/2.5 :dim.width/4.5,
                         zIndex:0,
                         rotateZ:5,
-                        translateY:rotateX,
-                        translateX:rotateY,
+                        translateY:dim.width < 600 ? 0 : rotateX,
+                        translateX:dim.width < 600 ? 0 : rotateY,
                         
                         }}>
                     <Image
@@ -337,55 +337,31 @@ const Home = () => {
                 </div>
             </div>
             
-            <footer 
-            className = {classes.Mfooter}
-            >
-                <div
-                className = {classes.Footer}
-                >
-                <div
-                style={{
-                    
-                    top:"3vh"
-                }}
-                >
+            <footer className = {classes.Mfooter} >
+                <div className = {classes.Footer} >
+                <div style={{display:"none",top:"3vh"}}>
                 <Image
-                style={{
-                    position:"relative",
-                    
-                }}
+                style={{position:"relative"}}
                     src="/logo2.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/6}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.width/7}
+                    width={dim.width < 600 ? 0 :dim.width/6}
+                    height={dim.width < 600 ? 0 : dim.width/7}
                     alt="neophal-pps"
                     />
                 </div>
                 <div className={classes.Contact}>
                 <div>
-                     <h2
-                     style={{
-                        fontSize:"2.8vh",
-                        fontWeight:700,
-                        
-                        
-                     }}
-                     >Contact </h2>
-                     <h2>Amit Howladar 
-                     </h2>
+                     <h2 style={{ fontSize:"2.8vh", fontWeight:700,}} >Contact </h2>
+                     <h2>Amit Howladar </h2>
                      <a href="mailto:amit@neophal.com"> amit@neophal.com </a>
-                     <h2>
-                     +91 74900 37158
-                     </h2>
-                     
+                     <h2>+91 74900 37158 </h2>
                 </div>
                 <div className={classes.Address}>
-                <h2>
-                    <span 
-                    style={{
-                        fontSize:"2.8vh",
-                        fontWeight:700,
-                    }}
-                    >Address:</span> <br/> Plot no. 337, <br/> Industrial Area phase 2, <br/>  Chandigarh 160002
+                <h2> <span style={{ fontSize:"2.8vh", fontWeight:700,}}>
+                    Address:
+                    </span> <br/> 
+                    Plot no. 337, <br/> 
+                    Industrial Area phase 2, <br/>  
+                    Chandigarh 160002
                      </h2>
                 </div>
                 </div>
