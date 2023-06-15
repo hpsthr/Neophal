@@ -227,10 +227,10 @@ const Home = () => {
                 
                 <div className={classes.Sl3b1}>
                     <div>
-                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "7vh" : "15vh"}}>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
                         Bringing AI in
                     </motion.span></motion.h1>
-                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "7vh" : "15vh"}}>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
                         Cold Chain
                     </motion.span></motion.h1>
                     </div>
@@ -288,16 +288,16 @@ const Home = () => {
                 </div>
             
                 <div className={classes.Sl4b2} >
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Dynamic
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2 +10 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2 +10 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Controlled 
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2+20 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2+20 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Atmosphere
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Storage
                 </motion.span></h1>
                 <motion.h2 style={{opacity:oVal2}}>
@@ -309,13 +309,13 @@ const Home = () => {
             </div>
             <div className={classes.Slide5}>
                 <div className={classes.Sl5b1}>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal3 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Primary
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal3 +10 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3 +10 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Processing
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal3+20 ? 0 : dim.width < 600 ? "7vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3+20 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Solutions
                 </motion.span></h1>
                 <motion.h2 style={{opacity:oVal3}}>
