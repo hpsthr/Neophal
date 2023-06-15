@@ -155,39 +155,39 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:"-22vh",
-                        left:"82vw",
-                        width:dim.width/4.5,
+                        top:dim.width < 600 ? "-20vh" :"-22vh",
+                        left:dim.width < 600 ? "45vw" :"82vw",
+                        width:dim.width < 600 ? dim.width/2.5 : dim.width/4.5,
                         zIndex:0,
                         rotateZ:186,
                         translateY:rotateY,
                         translateX:rotateX,
-                        opacity:dim.width < 600 ? 0 : 1 ,
+                        
                     }}
                     >
                     <Image
                     src="/img_033.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/4}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
+                    width={dim.width < 600 ? dim.width/1 :dim.width/4}
+                    height={dim.width < 600 ? dim.height/1 : dim.width/4}
                     alt="neophal-pps"
                     />
                     </motion.div>
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:"27vh",
-                        left:"-6vw",
-                        width:dim.width/4.5,
+                        top:dim.width < 600 ? "33vh" :"27vh",
+                        left:dim.width < 600 ? "-20vw" :"-6vw",
+                        width:dim.width < 600 ? dim.width/2.5 :dim.width/4.5,
                         zIndex:0,
                         rotateZ:5,
                         translateY:rotateX,
                         translateX:rotateY,
-                        opacity:dim.width < 600 ? 0 : 1 ,
+                        
                         }}>
                     <Image
                     src="/img_033.png"
-                    width={dim.width < 600 ? dim.width/1.4 :dim.width/4}
-                    height={dim.width < 600 ? dim.height/1.4 : dim.width/4}
+                    width={dim.width < 600 ? dim.width/1 :dim.width/4}
+                    height={dim.width < 600 ? dim.height/1 : dim.width/4}
                     alt="neophal-pps"
                     />
                     </motion.div>
@@ -197,7 +197,7 @@ const Home = () => {
                         }}>
                             About
                         </motion.span></motion.h1>
-                    <div>
+                    <div style={{position:"relative" ,top:dim.width < 600 ? 0 :"3vh", left:dim.width < 600 ? 0 :"8vw"}}>
                     <motion.h2><motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
                     With an aim to reduce food wastage, Neophal&#39;s innovations in 
                     </motion.span></motion.h2>
