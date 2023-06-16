@@ -71,6 +71,16 @@ const Home = () => {
     return (
 
         <div ref={ref} className={classes.Home}>
+            {dim.width < 600 ? <div style={{ top:0, position:"absolute", display:"flex",backgroundColor:"#e9373d", height:"100vh", width:"100vw"}}>
+            <video
+                style={{top:dim.width < 600 ? "-3vh" : "0", zIndex: 3}}
+                autoPlay
+                loop
+                muted
+                src={require("./Assets/video2.mp4")}
+                type="video/mp4"
+                className={classes.Video}></video>
+            </div> : <div>
             <video
                 autoPlay
                 loop
@@ -78,14 +88,16 @@ const Home = () => {
                 src={require("./Assets/video2.mp4")}
                 type="video/mp4"
                 className={classes.Video}></video>
-            <motion.div className={classes.Vidcon}>
+            </div>}
+            
                 
-                <div>
+            <motion.div className={classes.Vidcon}>
+            
+                <div style={{position: "relative", top:dim.width < 600 ? "34vh" : "0"}}>
                     <h1 className={classes.Slide1}>
-
-                   <span>
-                    NE
-                   </span>
+                        <span>
+                            NE
+                        </span>
                     <span 
                    
                     >

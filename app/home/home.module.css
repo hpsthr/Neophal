@@ -40,8 +40,8 @@
     display: inline;
     height:100vh;
     background-color: transparent;
-    filter: blue;
-    z-index: 99;
+    z-index: 9;
+    
 }
 .Home h1 span{
     display:inline;
@@ -884,6 +884,11 @@ border-radius:14px;
         line-height:10vh;
         color:#bedeff;
     }
-    
+    .Video {
+        
+        height:75vh;
+        width: 100vw;
+        object-fit: cover;
+    }
     
 }
