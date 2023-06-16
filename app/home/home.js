@@ -93,7 +93,7 @@ const Home = () => {
                 
             <motion.div className={classes.Vidcon}>
             
-                <div style={{position: "relative", top:dim.width < 600 ? "30vh" : "0"}}>
+                <div style={{position: "relative", top:dim.width < 600 ? "26vh" : "0"}}>
                     <h1 className={classes.Slide1}>
                         <span>
                             NE
