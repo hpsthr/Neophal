@@ -59,8 +59,8 @@ const Home = () => {
         const cSize = dim.width <= 600 ? "16vw" :  "29vh";
         const imgA1 = dim.width < 600 ? 1800 : 2000 
         const imgA2 = dim.width < 600 ? 2800 : 2600 
-        const oVal2 = dim.width < 600 ? useTransform(scrollYProgress, [0.73, 0.74], [0, 1]) : useTransform(scrollYProgress, [0.73, 0.74], [0, 1]);
-        const oVal3 = dim.width < 600 ? useTransform(scrollYProgress, [0.91, 0.92], [0, 1]) : useTransform(scrollYProgress, [0.93, 0.94], [0, 1]);
+        const oVal2 =   useTransform(scrollYProgress, [0.73, 0.74], [0, 1]);
+        const oVal3 =   useTransform(scrollYProgress, dim.width < 600 ? [0.93, 0.94] : [0.91, 0.92], [0, 1]) 
 
         const handleMouse = (event) => {
             const rect = event.currentTarget.getBoundingClientRect();
