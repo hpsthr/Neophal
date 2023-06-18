@@ -25,6 +25,7 @@ const Home = () => {
     const faVal4 = 900;
     const tVal = "97vh";
     
+    
     const dSize = "17vh"
     let mxPosition = 0;
     let myPosition = 0;
@@ -38,11 +39,6 @@ const Home = () => {
     // const snVal = useTransform(scrollYProgress, [0.22, 0.25], [1, 0])
     const sVal = 1
     const snVal = 1
-    
-    const oVal2 = useTransform(scrollYProgress, [0.73, 0.74], [0, 1])
-    const oVal3 = useTransform(scrollYProgress, [0.93, 0.94], [0, 1])
-    const mColor = "white"
-    const wDth = "500"
     const [yvalue,setYvalue] = useState(0)
     const [avalue,setAvalue] = useState(0)
     const [dim, setDim] = useState({width:0, height:0})
@@ -61,6 +57,11 @@ const Home = () => {
         const rotateX = useTransform(x, [0, dim.width], [100, 0]);
         const rotateY = useTransform(y, [0, dim.height], [100, 0]);
         const cSize = dim.width <= 600 ? "16vw" :  "29vh";
+        const imgA1 = dim.width < 600 ? 1800 : 2000 
+        const imgA2 = dim.width < 600 ? 2800 : 2600 
+        const oVal2 = dim.width < 600 ? useTransform(scrollYProgress, [0.73, 0.74], [0, 1]) : useTransform(scrollYProgress, [0.73, 0.74], [0, 1]);
+        const oVal3 = dim.width < 600 ? useTransform(scrollYProgress, [0.91, 0.92], [0, 1]) : useTransform(scrollYProgress, [0.93, 0.94], [0, 1]);
+
         const handleMouse = (event) => {
             const rect = event.currentTarget.getBoundingClientRect();
             x.set(event.clientX + rect.left);
@@ -288,7 +289,7 @@ const Home = () => {
                 <div className={classes.Sl4b1}>
                     <motion.div className={classes.ImgAnimation1}
                     style={{
-                        translateX: fixVal.current > 2000 ? dim.width < 600 ? "100vw" : "50vw" : 0,
+                        translateX: fixVal.current > imgA1 ? dim.width < 600 ? "100vw" : "50vw" : 0,
                     }}
                     ></motion.div>
                 <Image
@@ -336,7 +337,7 @@ const Home = () => {
                 </div>
                 <div className={classes.Sl5b2}>
                 <motion.div className={classes.ImgAnimation1}
-                style={{translateX: fixVal.current > 2600 ? dim.width < 600 ? "-100vw" : "-50vw" : 0 ,backgroundColor:"white"}}>
+                style={{translateX: fixVal.current > imgA2 ? dim.width < 600 ? "-100vw" : "-50vw" : 0 ,backgroundColor:"white"}}>
                 </motion.div>
 
                 <Image
