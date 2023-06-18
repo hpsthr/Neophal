@@ -294,6 +294,7 @@ const Home = () => {
                     ></motion.div>
                 <Image
                     src="/img_052.png"
+                    
                     width={dim.width < 600 ? dim.width/1.2 :dim.width/1.8}
                     height={dim.height}
                     alt="neophal-app"
@@ -343,6 +344,7 @@ const Home = () => {
                 <Image
                 
                     src="/img_062.png"
+                    style={{top:dim.width < 600 ? "1vh": 0}}
                     width={dim.width < 600 ? dim.width/1.4 :dim.width/1.8}
                     height={dim.height} 
                     alt="neophal-pps"
