@@ -205,12 +205,15 @@ const Home = () => {
                     />
                     </motion.div>
                     <motion.h1><motion.span style={{ display:"inline-block",
-                        translateY: fixVal.current >= faVal ? 0 : "15vh",
+                        translateY: fixVal.current >= faVal ? 0 : dim.width < 600 ? 0 : "15vh",
                         transition:"0.4s",
                         }}>
                             About
                         </motion.span></motion.h1>
-                    <div style={{position:"relative" ,top:dim.width < 600 ? 0 :"3vh", left:dim.width < 600 ? 0 :"8vw"}}>
+
+                    {dim.width < 600 ? <div><h2>
+                        With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and  high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.  
+                    </h2></div> :<div style={{position:"relative" ,top:dim.width < 600 ? 0 :"3vh", left:dim.width < 600 ? 0 :"8vw"}}>
                     <motion.h2><motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
                     With an aim to reduce food wastage, Neophal&#39;s innovations in 
                     </motion.span></motion.h2>
@@ -229,7 +232,7 @@ const Home = () => {
                     <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
                      in turn would help them get better realisation of their produce.  
                      </motion.span> </motion.h2>
-                    </div>
+                    </div>}
                     
                     </motion.div>
 
@@ -240,13 +243,16 @@ const Home = () => {
                 
                 <div className={classes.Sl3b1}>
                     <div>
-                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "8vh" : "15vh"}}>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
                         Bringing AI in
                     </motion.span></motion.h1>
-                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "8vh" : "15vh"}}>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
                         Cold Chain
                     </motion.span></motion.h1>
                     </div>
+                    {dim.width < 600 ? <div><h2>
+                        AI technology integrates into temperature-sensitive product transportation and storage, enhancing efficiency and minimizing spoilage. Real-time monitoring and predictive modeling enable optimal temperature control, ensuring product safety and preventing losses. 
+                    </h2></div> :
                 <div
                 style={{position:"relative", top: dim.width < 600 ? 0 :"6vh", left:dim.width < 600 ? 0 : "8vw"}}
                 >
@@ -262,7 +268,7 @@ const Home = () => {
                 <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
                 temperature control, ensuring product safety and preventing losses.  
                 </motion.span></motion.h2>
-                </div>
+                </div>}
                 
                 
                 </div>
@@ -289,7 +295,7 @@ const Home = () => {
                 <div className={classes.Sl4b1}>
                     <motion.div className={classes.ImgAnimation1}
                     style={{
-                        translateX: fixVal.current > imgA1 ? dim.width < 600 ? "100vw" : "50vw" : 0,
+                        translateX: fixVal.current > imgA1 ? dim.width < 600 ? 0 : "50vw" : 0,
                     }}
                     ></motion.div>
                 <Image
@@ -302,19 +308,19 @@ const Home = () => {
                 </div>
             
                 <div className={classes.Sl4b2} >
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Dynamic
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2 +10 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2 +10 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Controlled 
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2+20 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2+20 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Atmosphere
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Storage
                 </motion.span></h1>
-                <motion.h2 style={{opacity:oVal2}}>
+                <motion.h2 style={{opacity:dim.width < 600 ? 1 : oVal2}}>
                 Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storages to provide the ideal environment for the produce to survive long and be healthy without losing any of their nutritional content. The conditions of the atmosphere including temperature, moisture, oxygen and other critical elements are dynamically controlled to preserve the quality of the fruits stored inside these storages.                
                 </motion.h2>
                 </div>
@@ -323,22 +329,22 @@ const Home = () => {
             </div>
             <div className={classes.Slide5}>
                 <div className={classes.Sl5b1}>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal3 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Primary
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal3 +10 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3 +10 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Processing
                 </motion.span></h1>
-                <h1><motion.span style={{translateY: fixVal.current >= faVal3+20 ? 0 : dim.width < 600 ? "8vh" :"13vh",}} >
+                <h1><motion.span style={{translateY: fixVal.current >= faVal3+20 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
                     Solutions
                 </motion.span></h1>
-                <motion.h2 style={{opacity:oVal3}}>
+                <motion.h2 style={{opacity:dim.width < 600 ? 1 : oVal3}}>
                 Neophal uses the latest of technologies for automation in sorting, grading and packing of fruits and vegetables. The use of these technologies eliminates human error and bring efficiency in the process.
                 </motion.h2>
                 </div>
                 <div className={classes.Sl5b2}>
                 <motion.div className={classes.ImgAnimation1}
-                style={{translateX: fixVal.current > imgA2 ? dim.width < 600 ? "-100vw" : "-50vw" : 0 ,backgroundColor:"white"}}>
+                style={{translateX: fixVal.current > imgA2 ? dim.width < 600 ? 0 : "-50vw" : 0 ,backgroundColor:dim.width < 600 ? "transparent" : "white"}}>
                 </motion.div>
 
                 <Image

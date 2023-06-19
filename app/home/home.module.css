@@ -672,8 +672,8 @@ border-radius:14px;
     .Sl2b2 h2 {
         position:relative;
         width:95vw;
-        font-size: 2.6vw;
-        line-height: 2.8vw;
+        font-size: 2.9vw;
+        line-height: 110%;
         text-align: center;
         
     
@@ -717,9 +717,12 @@ border-radius:14px;
     
     .Sl3b1 h2{
         width:95vw;
-        height:3vw;
+        height:3.5vw;
+        line-height: 110%;
         font-size: 3vw;
+        text-transform: capitalize;
         text-align: center;
+        overflow: visible;
     }
     .Sl3b1 h2 span{
         display:inline-block;
@@ -764,7 +767,7 @@ border-radius:14px;
         object-fit:cover;
     }
     .ImgAnimation1{
-        
+        background-color: transparent;
         height:50vh;
         width:100vw;
         
