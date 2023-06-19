@@ -9,7 +9,7 @@ const Home = () => {
     
     const ref = useRef(null);
     const limValue = 200;
-    const {scrollYProgress} = useScroll({target: ref});// declaring reference container to play animation
+    const {scrollYProgress} = useScroll({target: ref});// declaring reference container to play animate
     const v1 = 0.035;
     const v2 = 0.11;
     
@@ -151,13 +151,23 @@ const Home = () => {
                     
                     
                     </motion.div>
+                    {
+                       dim.width < 600 ?
+                       <Image
+                       src="/img_011.png"
+                       width={dim.width/0.8}
+                       height={dim.height/1}
+                       alt="neophal-pharms"
+                       />
+                       : 
+                       <Image
+                       src="/img_01.png"
+                       width={dim.width < 600 ? dim.width/0.5 :dim.width}
+                       height={dim.width < 600 ? dim.height/1 : dim.height}
+                       alt="neophal-farms"
+                       />
+                    }
                     
-                    <Image
-                    src="/img_01.png"
-                    width={dim.width < 600 ? dim.width/0.5 :dim.width}
-                    height={dim.width < 600 ? dim.height/1 : dim.height}
-                    alt="neophal-pps"
-                    />
                     </div>
                     <motion.div className={classes.Sl2b2} onMouseMove={handleMouse}>
                     <motion.div
