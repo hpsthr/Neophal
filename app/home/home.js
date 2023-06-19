@@ -9,32 +9,27 @@ const Home = () => {
     
     const ref = useRef(null);
     const limValue = 200;
-    const {scrollYProgress} = useScroll({target: ref});
+    const {scrollYProgress} = useScroll({target: ref});// declaring reference container to play animation
     const v1 = 0.035;
     const v2 = 0.11;
-    const v3 = 0.5;
+    
     const uVal = 450;
     const vA1 = 420;
     const vA2 = vA1 + uVal;
     const vA3 = vA2 + uVal;
-    const vA4 = vA3 + uVal;
-    const vA5 = vA4 + uVal;
+    
+    
     const faVal = 640;
     const faVal2 = 2000;
     const faVal3 = 2600;
     const faVal4 = 900;
-    const tVal = "97vh";
-    
-    
-    const dSize = "17vh"
-    let mxPosition = 0;
-    let myPosition = 0;
+   
     const yVal = useTransform(scrollYProgress, [v1, 0], [limValue, 0]) // when we have extrapolate value we used this
-    const y2Val = useTransform(scrollYProgress, [v2, v1], [700,(limValue - 1)]) // 
-    const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0])
-    const appleVal = useTransform(scrollYProgress, [0.20, 0.37], [0, 320])
-    const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
-    const xVal = useTransform(scrollYProgress, [v2, 0], [250, 0.1])
+    const y2Val = useTransform(scrollYProgress, [v2, v1], [700,(limValue - 1)]) // creating value for whole page
+    const fixVal = useTransform(scrollYProgress, [1, 0], [3000, 0]) // extracting scroll position from whole page in between last two numbers
+    // const appleVal = useTransform(scrollYProgress, [0.20, 0.37], [0, 320])
+    // const y1Val = useTransform(scrollYProgress, [0, v1], [0, -(limValue)])
+    // const xVal = useTransform(scrollYProgress, [v2, 0], [250, 0.1])
     // const sVal = useTransform(scrollYProgress, [0.05, 0.20], [1, 10])
     // const snVal = useTransform(scrollYProgress, [0.22, 0.25], [1, 0])
     const sVal = 1
@@ -159,8 +154,8 @@ const Home = () => {
                     
                     <Image
                     src="/img_01.png"
-                    width={dim.width < 600 ? dim.height/2 :dim.width}
-                    height={dim.width < 600 ? dim.width/2 : dim.height}
+                    width={dim.width < 600 ? dim.width/0.5 :dim.width}
+                    height={dim.width < 600 ? dim.height/1 : dim.height}
                     alt="neophal-pps"
                     />
                     </div>
@@ -180,7 +175,7 @@ const Home = () => {
                     >
                     <Image
                     src="/img_033.png"
-                    width={dim.width < 600 ? dim.width/1 :dim.width/4}
+                    width={dim.width < 600 ? dim.width/0.5 :dim.width/4}
                     height={dim.width < 600 ? dim.height/1 : dim.width/4}
                     alt="neophal-pps"
                     />
@@ -199,17 +194,14 @@ const Home = () => {
                         }}>
                     <Image
                     src="/img_033.png"
-                    width={dim.width < 600 ? dim.width/1 :dim.width/4}
+                    width={dim.width < 600 ? dim.width/0.5 :dim.width/4}
                     height={dim.width < 600 ? dim.height/1 : dim.width/4}
                     alt="neophal-pps"
                     />
                     </motion.div>
-                    <motion.h1><motion.span style={{ display:"inline-block",
-                        translateY: fixVal.current >= faVal ? 0 : dim.width < 600 ? 0 : "15vh",
-                        transition:"0.4s",
-                        }}>
+                    <motion.h1><motion.span style={{ display:"inline-block", translateY: fixVal.current >= faVal ? 0 : dim.width < 600 ? 0 : "15vh", transition:"0.4s", }}>
                             About
-                        </motion.span></motion.h1>
+                    </motion.span></motion.h1>
 
                     {dim.width < 600 ? <div><h2>
                         With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and  high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.  
