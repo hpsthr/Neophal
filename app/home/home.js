@@ -150,8 +150,8 @@ const Home = () => {
                        dim.width < 600 ?
                        <Image
                        src="/img_011.png"
-                       width={dim.width/0.8}
-                       height={dim.height/1}
+                       width={dim.width/0.5}
+                       height={dim.height/12}
                        alt="neophal-pharms"
                        />
                        : 
