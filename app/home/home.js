@@ -74,6 +74,8 @@ const Home = () => {
                 autoPlay
                 loop
                 muted
+                playsInline
+                preload="auto"
                 src={require(dim.width < 600 ?"./Assets/video21.mp4" :"./Assets/video2.mp4")}
                 type="video/mp4"
                 className={classes.Video}></video>
