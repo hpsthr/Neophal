@@ -671,10 +671,10 @@ border-radius:14px;
     }
     .Sl2b2 h2 {
         position:relative;
-        width:92vw;
+        width:88vw;
         font-size: 3vw;
         line-height: 110%;
-        text-align: center;
+        text-align: left;
         font-weight: 400;
         
             
@@ -721,13 +721,13 @@ border-radius:14px;
     
     
     .Sl3b1 h2{
-        width:92vw;
+        width:88vw;
         height:3.5vw;
         line-height: 110%;
         font-size: 3vw;
         text-transform: none;
         font-weight:400;
-        text-align: center;
+        text-align: left;
         overflow: visible;
     }
     .Sl3b1 h2 span{
@@ -804,7 +804,7 @@ border-radius:14px;
         height:7.2vh;
         width: 98vw;
         left:0vw;
-        text-align: center;
+        text-align: center ;
     }
 
     .Sl5b1 h1 {
@@ -838,6 +838,7 @@ border-radius:14px;
         margin-top:1vh;
         width:90vw;
         font-size: 3vw;
+        text-align: left;
     }
     
     
