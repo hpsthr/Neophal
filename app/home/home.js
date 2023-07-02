@@ -139,8 +139,8 @@ const Home = () => {
                     <motion.div className={classes.Logo} style={{opacity:1 }}>
                         <Image style={{position:"relative"}}
                         src="/logo2.png"
-                        width={dim.width < 600 ? dim.width/4 :dim.width/10}
-                        height={dim.width < 600 ? dim.height/4 : dim.width/10}
+                        width={dim.width < 600 ? dim.width/3 :dim.width/10}
+                        height={dim.width < 600 ? dim.height/3 : dim.width/10}
                         alt="neophal-pps"
                         />
                     
