@@ -204,9 +204,9 @@ const Home = () => {
                     alt="neophal-pps"
                     />
                     </motion.div>
-                    {dim.width < 600 ? <div></div> : <motion.h1><motion.span style={{ display:"inline-block", translateY: fixVal.current >= faVal ? 0 : dim.width < 600 ? 0 : "15vh", transition:"0.4s", }}>
+                    {/* {dim.width < 600 ? <div></div> : <motion.h1><motion.span style={{ display:"inline-block", translateY: fixVal.current >= faVal ? 0 : dim.width < 600 ? 0 : "15vh", transition:"0.4s", }}>
                             About
-                    </motion.span></motion.h1> }
+                    </motion.span></motion.h1> } */}
                     
 
                     {dim.width < 600 ? <div><h2>
@@ -245,14 +245,12 @@ const Home = () => {
                         Bringing AI in
                     </motion.span></motion.h1>
                     <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
-                        Cold Chain
+                        cold chain
                     </motion.span></motion.h1>
                     </div>
-                    {dim.width < 600 ? <div><h2>
-                        AI technology integrates into temperature-sensitive product transportation and storage, enhancing efficiency and minimizing spoilage. Real-time monitoring and predictive modeling enable optimal temperature control, ensuring product safety and preventing losses. 
-                    </h2></div> :
+                    {dim.width < 600 ? <span></span> :
                 <div
-                style={{position:"relative", top: dim.width < 600 ? 0 :"6vh", left:dim.width < 600 ? 0 : "8vw"}}
+                style={{position:"relative", top: dim.width < 600 ? 0 :"6vh", left:dim.width < 600 ? 0 : "6vw"}}
                 >
                 <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
                 AI technology integrates into temperature-sensitive product 
