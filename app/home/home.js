@@ -314,7 +314,7 @@ const Home = () => {
                     Atmosphere
                 </motion.span></h1>
                 <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
-                    Storage
+                    Storages
                 </motion.span></h1>
                 <motion.h2 style={{opacity:dim.width < 600 ? 1 : oVal2}}>
                 Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storages to provide the ideal environment for the produce to survive long and be healthy without losing any of their nutritional content. The conditions of the atmosphere including temperature, moisture, oxygen and other critical elements are dynamically controlled to preserve the quality of the fruits stored inside these storages.                

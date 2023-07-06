@@ -123,6 +123,7 @@ letter-spacing: -0.02em;
     font-size: 2.8vh;
     font-weight: 600;
     line-height: 3.3vh;
+    text-align: justify;
     color: #363636;
     letter-spacing: 0.01em;
     overflow:hidden;
@@ -181,6 +182,7 @@ letter-spacing: -0.02em;
     font-weight: 300;
     line-height: 90%;
     color: #363636;
+    text-align: justify;
     letter-spacing: -0.04em;
     overflow:hidden;
 }
@@ -275,6 +277,7 @@ letter-spacing: -0.02em;
     font-weight: 400;
     font-size: 2.8vh;
     line-height: 120%;
+    text-align: justify;
     color: #363636;
 }
 
@@ -303,6 +306,7 @@ letter-spacing: -0.02em;
     font-weight: 400;
     font-size: 2.8vh;
     line-height: 120%;
+    text-align: justify;
     color: #363636;
 }
 
@@ -673,15 +677,10 @@ border-radius:14px;
         width:88vw;
         font-size: 4vw;
         line-height: 110%;
-        text-align: left;
+        text-align: justify;
         font-weight: 400;
-        
-            
-        
-        
-        
-    
-    }
+        }
+
     .Sl2b2 h2 span {
         display:inline-block;
         transition:0.8s cubic-bezier(0.89, 0.01, 0.05, 0.95);
@@ -726,7 +725,7 @@ border-radius:14px;
         font-size: 3vw;
         text-transform: none;
         font-weight:400;
-        text-align: left;
+        text-align: justify;
         overflow: visible;
     }
     .Sl3b1 h2 span{
@@ -832,13 +831,14 @@ border-radius:14px;
         margin-top:1vh;
         width:90vw;
         font-size: 4vw;
+        text-align: justify;
         }
 
     .Sl5b1 h2 {
         margin-top:1vh;
         width:90vw;
         font-size: 4vw;
-        text-align: left;
+        text-align: justify;
     }
     
     
