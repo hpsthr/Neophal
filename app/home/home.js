@@ -224,9 +224,8 @@ const Home = () => {
             className={classes.Slide3}>
                 
                 <div className={classes.Sl3b1}>
-                    <div style={{ position:'relative',top:"-2vh"}}>
-                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
-                        Bringing AI in cold chain
+                    <div style={{ position:'relative',top:"-2vh" }}>
+                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>Bringing AI in cold chain
                     </motion.span></motion.h1>
                     </div>
                     

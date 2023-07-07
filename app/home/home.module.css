@@ -151,7 +151,7 @@ letter-spacing: -0.02em;
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
 }
@@ -162,9 +162,7 @@ letter-spacing: -0.02em;
     color: #F0494B;
     line-height: 120%;
     font-weight: 700;
-    
     width: 60vw;
-    left:3vw;
     letter-spacing: -0.02em;
     overflow: hidden;
     
