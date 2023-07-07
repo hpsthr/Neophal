@@ -54,7 +54,7 @@ const Home = () => {
         const cSize = dim.width <= 600 ? "16vw" :  "29vh";
         const imgA1 = dim.width < 600 ? 1800 : 2000 
         const imgA2 = dim.width < 600 ? 2800 : 2600 
-        const oVal1 =   useTransform(scrollYProgress, [0.22, 0.25], [0, 1]);
+        const oVal1 =   useTransform(scrollYProgress, [0.21, 0.23], [0, 1]);
         const oVal2 =   useTransform(scrollYProgress, [0.73, 0.74], [0, 1]);
         const oVal3 =   useTransform(scrollYProgress, dim.width < 600 ? [0.93, 0.94] : [0.91, 0.92], [0, 1]) 
 
@@ -224,12 +224,9 @@ const Home = () => {
             className={classes.Slide3}>
                 
                 <div className={classes.Sl3b1}>
-                    <div>
+                    <div style={{ position:'relative',top:"-2vh"}}>
                     <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
-                        Bringing AI in
-                    </motion.span></motion.h1>
-                    <motion.h1><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : dim.width < 600 ? "0" : "15vh"}}>
-                        cold chain
+                        Bringing AI in cold chain
                     </motion.span></motion.h1>
                     </div>
                     
