@@ -90,7 +90,7 @@
 .Sl2b1 {
     z-index: 2;
 position:relative;
-height:55vh;
+height:60vh;
 }
 
 .Sl2b2{
@@ -100,7 +100,7 @@ height:55vh;
     align-items: center;
 position:relative;
 width:100vw;
-height:48vh;
+height:44vh;
 background-color:#F0F0F0;
 }
 
@@ -118,18 +118,19 @@ letter-spacing: -0.02em;
 }
 .Sl2b2 h2 {
     position:relative;
-    width:54vw;
+    width:60vw;
     font-family: 'Neurial Grotesk';
     font-size: 2.8vh;
     font-weight: 600;
     line-height: 3.3vh;
     text-align: justify;
     color: #363636;
-    letter-spacing: 0.01em;
+    
     overflow:hidden;
 
 }
 .Sl2b2 h2 span {
+    text-align: justify;
     display:inline-block;
     transition:0.8s cubic-bezier(0.89, 0.01, 0.05, 0.95);
 }

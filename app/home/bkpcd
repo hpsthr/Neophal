@@ -1,0 +1,14 @@
+<div style={{position:"relative" ,top:dim.width < 600 ? 0 :"3vh", left:dim.width < 600 ? 0 :"0vw", textAlign:"justify"}}>
+                    <motion.h2><motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                    With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing
+                    </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                     technologies has the potential to bring radical changes in the sector. With these innovations growers
+                    </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                      would have access to quality storages and high-tech grading and packing solutions at their farmgate.
+                     </motion.span></motion.h2>
+                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
+                    This in turn would help them get better realisation of their produce.
+                     </motion.span></motion.h2>
+                    </div>

@@ -54,6 +54,7 @@ const Home = () => {
         const cSize = dim.width <= 600 ? "16vw" :  "29vh";
         const imgA1 = dim.width < 600 ? 1800 : 2000 
         const imgA2 = dim.width < 600 ? 2800 : 2600 
+        const oVal1 =   useTransform(scrollYProgress, [0.22, 0.25], [0, 1]);
         const oVal2 =   useTransform(scrollYProgress, [0.73, 0.74], [0, 1]);
         const oVal3 =   useTransform(scrollYProgress, dim.width < 600 ? [0.93, 0.94] : [0.91, 0.92], [0, 1]) 
 
@@ -168,7 +169,7 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:dim.width < 600 ? "-12vh" :"-22vh",
+                        top:dim.width < 600 ? "-12vh" :"-27vh",
                         left:dim.width < 600 ? "70vw" :"82vw",
                         width:dim.width < 600 ? dim.width/2.5 : dim.width/4.5,
                         zIndex:0,
@@ -188,7 +189,7 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:dim.width < 600 ? "42vh" :"27vh",
+                        top:dim.width < 600 ? "42vh" :"25vh",
                         left:dim.width < 600 ? "-4vw" :"-6vw",
                         width:dim.width < 600 ? dim.width/2.5 :dim.width/4.5,
                         zIndex:0,
@@ -211,26 +212,9 @@ const Home = () => {
 
                     {dim.width < 600 ? <div><h2>
                         With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storages and  high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.  
-                    </h2></div> :<div style={{position:"relative" ,top:dim.width < 600 ? 0 :"3vh", left:dim.width < 600 ? 0 :"8vw"}}>
-                    <motion.h2><motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                    With an aim to reduce food wastage, Neophal&#39;s innovations in 
-                    </motion.span></motion.h2>
-                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                    cold storage and primary processing technologies has the 
-                    </motion.span></motion.h2>
-                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                     potential to bring radical changes in the sector. With these
-                     </motion.span></motion.h2>
-                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                     innovations, growers would have access to quality storages and 
-                     </motion.span></motion.h2>
-                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                     high-tech grading and packing solutions at their farmgate. This 
-                     </motion.span> </motion.h2>
-                    <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                     in turn would help them get better realisation of their produce.  
-                     </motion.span> </motion.h2>
-                    </div>}
+                    </h2></div> :<motion.div style={{opacity:oVal1}}><h2>
+                        With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storages and  high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.  
+                    </h2></motion.div> }
                     
                     </motion.div>
 
@@ -248,23 +232,7 @@ const Home = () => {
                         cold chain
                     </motion.span></motion.h1>
                     </div>
-                    {dim.width < 600 ? <span></span> :
-                <div
-                style={{position:"relative", top: dim.width < 600 ? 0 :"6vh", left:dim.width < 600 ? 0 : "6vw"}}
-                >
-                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
-                AI technology integrates into temperature-sensitive product 
-                </motion.span></motion.h2>
-                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
-                transportation and storage, enhancing efficiency and minimizing 
-                </motion.span></motion.h2>
-                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
-                spoilage. Real-time monitoring and predictive modeling enable optimal
-                </motion.span></motion.h2>
-                <motion.h2><motion.span style={{translateY: fixVal.current >= faVal4 ? 0 : "3vh",}}>
-                temperature control, ensuring product safety and preventing losses.  
-                </motion.span></motion.h2>
-                </div>}
+                    
                 
                 
                 </div>
