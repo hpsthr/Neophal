@@ -210,7 +210,7 @@ const Home = () => {
                     
 
                     {dim.width < 600 ? <div><h2>
-                        With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storage and  high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.  
+                        With an aim to reduce food wastage, Neophal&#39;s innovations in cold storage and primary processing technologies has the potential to bring radical changes in the sector. With these innovations, growers would have access to quality storages and  high-tech grading and packing solutions at their farmgate. This in turn would help them get better realisation of their produce.  
                     </h2></div> :<div style={{position:"relative" ,top:dim.width < 600 ? 0 :"3vh", left:dim.width < 600 ? 0 :"8vw"}}>
                     <motion.h2><motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
                     With an aim to reduce food wastage, Neophal&#39;s innovations in 
@@ -222,7 +222,7 @@ const Home = () => {
                      potential to bring radical changes in the sector. With these
                      </motion.span></motion.h2>
                     <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
-                     innovations, growers would have access to quality storage and 
+                     innovations, growers would have access to quality storages and 
                      </motion.span></motion.h2>
                     <motion.h2> <motion.span style={{translateY: fixVal.current >= faVal+30 ? 0 : "3vh",}}>
                      high-tech grading and packing solutions at their farmgate. This 
@@ -314,7 +314,7 @@ const Home = () => {
                     Atmosphere
                 </motion.span></h1>
                 <h1><motion.span style={{translateY: fixVal.current >= faVal2+30 ? 0 : dim.width < 600 ? "0" :"13vh",}} >
-                    Storages
+                    storages
                 </motion.span></h1>
                 <motion.h2 style={{opacity:dim.width < 600 ? 1 : oVal2}}>
                 Neophal utilises `Artificial Intelligence` to keep an eye on and manage the microclimate inside the storages to provide the ideal environment for the produce to survive long and be healthy without losing any of their nutritional content. The conditions of the atmosphere including temperature, moisture, oxygen and other critical elements are dynamically controlled to preserve the quality of the fruits stored inside these storages.                
