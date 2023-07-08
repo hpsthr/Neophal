@@ -169,7 +169,7 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:dim.width < 600 ? "-12vh" :"-27vh",
+                        top:dim.width < 600 ? "-10vh" :"-27vh",
                         left:dim.width < 600 ? "70vw" :"82vw",
                         width:dim.width < 600 ? dim.width/2.5 : dim.width/4.5,
                         zIndex:0,
@@ -189,7 +189,7 @@ const Home = () => {
                     <motion.div
                     style={{
                         position:"absolute",
-                        top:dim.width < 600 ? "42vh" :"25vh",
+                        top:dim.width < 600 ? "37vh" :"25vh",
                         left:dim.width < 600 ? "-4vw" :"-6vw",
                         width:dim.width < 600 ? dim.width/2.5 :dim.width/4.5,
                         zIndex:0,
